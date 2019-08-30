@@ -1,0 +1,2638 @@
+!SESSION 2019-07-31 01:09:01.586 -----------------------------------------------
+eclipse.buildId=3.6.4.201503100339-RELEASE-e44
+java.version=1.8.0_211
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.springsource.ggts.ide
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.springsource.ggts.ide
+
+!ENTRY org.eclipse.core.runtime 2 0 2019-07-31 01:17:01.576
+!MESSAGE Authorization infrastructure (org.eclipse.core.runtime.compatibility.auth) not installed.
+!STACK 0
+java.lang.ClassNotFoundException: org.eclipse.core.internal.runtime.auth.AuthorizationDatabase cannot be found by org.eclipse.core.runtime_3.10.0.v20140318-2214
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:432)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:345)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:337)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:160)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Unknown Source)
+	at org.eclipse.core.internal.runtime.AuthorizationHandler.getAuthClass(AuthorizationHandler.java:48)
+	at org.eclipse.core.internal.runtime.AuthorizationHandler.loadKeyring(AuthorizationHandler.java:69)
+	at org.eclipse.core.internal.runtime.AuthorizationHandler.flushAuthorizationInfo(AuthorizationHandler.java:231)
+	at org.eclipse.core.runtime.Platform.flushAuthorizationInfo(Platform.java:590)
+	at com.atlassian.connector.eclipse.internal.commons.ui.MigrateToSecureStorageJob.migrateToSecureStorage(MigrateToSecureStorageJob.java:89)
+	at com.atlassian.connector.eclipse.internal.commons.ui.MigrateToSecureStorageJob.runInUIThread(MigrateToSecureStorageJob.java:60)
+	at org.eclipse.ui.progress.UIJob$1.run(UIJob.java:97)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:136)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4147)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3764)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:135)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1438)
+
+!ENTRY org.eclipse.egit.ui 2 0 2019-07-31 01:17:03.740
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Mostafizur'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.grails.ide.eclipse.core 4 4 2019-07-31 01:28:54.863
+!MESSAGE Command terminated with an exception: java.lang.Exception (see details for partial output)
+!STACK 0
+java.lang.Exception: Command: GrailsCommand(P/test> compile --non-interactive --refresh-dependencies)
+---- System.out ----
+Loading Grails 2.5.6
+.
+|Environment set to development
+........
+|Compiling 10 source files
+.Error 
+|
+Compilation error: startup failed:
+General error during semantic analysis: unable to locate the java compiler com.sun.tools.javac.Main, please change your classloader settings
+java.lang.ClassNotFoundException: unable to locate the java compiler com.sun.tools.javac.Main, please change your classloader settings
+	at org.codehaus.groovy.tools.javac.JavacJavaCompiler.findJavac(JavacJavaCompiler.java:191)
+	at org.codehaus.groovy.tools.javac.JavacJavaCompiler.compile(JavacJavaCompiler.java:51)
+	at org.codehaus.groovy.tools.javac.JavaAwareCompilationUnit.gotoPhase(JavaAwareCompilationUnit.java:105)
+	at org.codehaus.groovy.control.CompilationUnit.compile(CompilationUnit.java:568)
+	at org.codehaus.groovy.control.CompilationUnit.compile(CompilationUnit.java:537)
+	at org.codehaus.groovy.tools.FileSystemCompiler.compile(FileSystemCompiler.java:61)
+	at org.codehaus.groovy.tools.FileSystemCompiler.doCompilation(FileSystemCompiler.java:217)
+	at org.codehaus.groovy.ant.Groovyc.runCompiler(Groovyc.java:1165)
+	at org.codehaus.groovy.ant.Groovyc.compile(Groovyc.java:1216)
+	at org.codehaus.groovy.grails.compiler.Grailsc.compile(Grailsc.java:78)
+	at org.codehaus.groovy.ant.Groovyc.execute(Groovyc.java:831)
+	at org.apache.tools.ant.UnknownElement.execute(UnknownElement.java:292)
+	at sun.reflect.GeneratedMethodAccessor46.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.apache.tools.ant.dispatch.DispatchUtils.execute(DispatchUtils.java:106)
+	at groovy.util.AntBuilder.performTask(AntBuilder.java:327)
+	at groovy.util.AntBuilder.nodeCompleted(AntBuilder.java:272)
+	at groovy.util.BuilderSupport.doInvokeMethod(BuilderSupport.java:154)
+	at groovy.util.AntBuilder.doInvokeMethod(AntBuilder.java:207)
+	at groovy.util.BuilderSupport.invokeMethod(BuilderSupport.java:67)
+	at org.codehaus.gant.GantBuilder.invokeMethod(GantBuilder.java:99)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.call(PogoMetaClassSite.java:48)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:133)
+	at org.codehaus.groovy.grails.project.compiler.GrailsProjectCompiler.compilePluginSources(GrailsProjectCompiler.groovy:380)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:210)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:59)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:174)
+	at org.codehaus.groovy.grails.project.compiler.GrailsProjectCompiler.compilePlugins(GrailsProjectCompiler.groovy:346)
+	at org.codehaus.groovy.grails.project.compiler.GrailsProjectCompiler$compilePlugins$2.callCurrent(Unknown Source)
+	at org.codehaus.groovy.grails.project.compiler.GrailsProjectCompiler.compilePlugins(GrailsProjectCompiler.groovy:314)
+	at org.codehaus.groovy.grails.project.compiler.GrailsProjectCompiler$compilePlugins$1.call(Unknown Source)
+	at _GrailsCompile$_run_closure3$_closure8$_closure9.doCall(_GrailsCompile.groovy:61)
+	at _GrailsCompile$_run_closure3$_closure8$_closure9.doCall(_GrailsCompile.groovy)
+	at _GrailsCompile$_run_closure3$_closure8$_closure9$doCall.call(Unknown Source)
+	at _GrailsCompile.withCompilationErrorHandling(_GrailsCompile.groovy:68)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:93)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1218)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1125)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1027)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1163)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1125)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1027)
+	at groovy.lang.DelegatingMetaClass.invokeMethod(DelegatingMetaClass.java:151)
+	at org.codehaus.gant.GantMetaClass.invokeMethod(GantMetaClass.java:133)
+	at org.codehaus.gant.GantMetaClass.invokeMethod(GantMetaClass.java:168)
+	at groovy.lang.GroovyObjectSupport.invokeMethod(GroovyObjectSupport.java:46)
+	at groovy.lang.MetaClassImpl.invokeMethodOnGroovyObject(MetaClassImpl.java:1283)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1177)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1125)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1027)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.callCurrent(PogoMetaClassSite.java:69)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:166)
+	at _GrailsCompile$_run_closure3$_closure8.doCall(_GrailsCompile.groovy:60)
+	at _GrailsCompile$_run_closure3$_closure8.doCall(_GrailsCompile.groovy)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:93)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1218)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1125)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1027)
+	at groovy.lang.Closure.call(Closure.java:414)
+	at groovy.lang.Closure.call(Closure.java:408)
+	at org.codehaus.groovy.grails.cli.api.BaseSettingsApi.profile(BaseSettingsApi.java:332)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:93)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1218)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1125)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1085)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1125)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1027)
+	at groovy.lang.MetaClassImpl.invokePropertyOrMissing(MetaClassImpl.java:1264)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1220)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1125)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1027)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:815)
+	at groovy.lang.GroovyObjectSupport.invokeMethod(GroovyObjectSupport.java:46)
+	at groovy.lang.Script.invokeMethod(Script.java:80)
+	at groovy.lang.MetaClassImpl.invokeMethodOnGroovyObject(MetaClassImpl.java:1283)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1177)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1125)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1027)
+	at groovy.lang.DelegatingMetaClass.invokeMethod(DelegatingMetaClass.java:151)
+	at org.codehaus.gant.GantMetaClass.invokeMethod(GantMetaClass.java:133)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.callCurrent(PogoMetaClassSite.java:69)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:52)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.callCurrent(PogoMetaClassSite.java:84)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:174)
+	at _GrailsCompile$_run_closure3.doCall(_GrailsCompile.groovy:57)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:93)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1218)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1125)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1027)
+	at groovy.lang.DelegatingMetaClass.invokeMethod(DelegatingMetaClass.java:151)
+	at org.codehaus.gant.GantMetaClass.invokeMethod(GantMetaClass.java:133)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.call(PogoMetaClassSite.java:42)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:48)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.call(PogoMetaClassSite.java:57)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+	at org.codehaus.gant.GantBinding$_initializeGantBinding_closure5_closure16_closure18.doCall(GantBinding.groovy:185)
+	at sun.reflect.GeneratedMethodAccessor73.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSite.invoke(PogoMetaMethodSite.java:169)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:59)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:166)
+	at org.codehaus.gant.GantBinding$_initializeGantBinding_closure5_closure16_closure18.doCall(GantBinding.groovy)
+	at sun.reflect.GeneratedMethodAccessor72.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:210)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.call(PogoMetaMethodSite.java:71)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:117)
+	at org.codehaus.gant.GantBinding.withTargetEvent(GantBinding.groovy:90)
+	at org.codehaus.gant.GantBinding.this$4$withTargetEvent(GantBinding.groovy)
+	at sun.reflect.GeneratedMethodAccessor67.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:93)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1218)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1125)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1027)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1163)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1125)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1027)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:815)
+	at groovy.lang.GroovyObjectSupport.invokeMethod(GroovyObjectSupport.java:46)
+	at groovy.lang.MetaClassImpl.invokeMethodOnGroovyObject(MetaClassImpl.java:1283)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1177)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1125)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1027)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.callCurrent(PogoMetaClassSite.java:69)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:182)
+	at org.codehaus.gant.GantBinding$_initializeGantBinding_closure5_closure16.doCall(GantBinding.groovy:185)
+	at sun.reflect.GeneratedMethodAccessor66.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSite.invoke(PogoMetaMethodSite.java:169)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:59)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:166)
+	at org.codehaus.gant.GantBinding$_initializeGantBinding_closure5_closure16.doCall(GantBinding.groovy)
+	at sun.reflect.GeneratedMethodAccessor65.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:93)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1218)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1125)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1027)
+	at groovy.lang.Closure.call(Closure.java:414)
+	at groovy.lang.Closure.call(Closure.java:408)
+	at org.codehaus.gant.GantMetaClass.processClosure(GantMetaClass.java:81)
+	at org.codehaus.gant.GantMetaClass.processArgument(GantMetaClass.java:95)
+	at org.codehaus.gant.GantMetaClass.invokeMethod(GantMetaClass.java:128)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.callCurrent(PogoMetaClassSite.java:69)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:52)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.callCurrent(PogoMetaClassSite.java:84)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:166)
+	at _GrailsCompile$_run_closure2.doCall(_GrailsCompile.groovy:44)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:93)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1218)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1125)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1027)
+	at groovy.lang.DelegatingMetaClass.invokeMethod(DelegatingMetaClass.java:151)
+	at org.codehaus.gant.GantMetaClass.invokeMethod(GantMetaClass.java:133)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.call(PogoMetaClassSite.java:42)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:48)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.call(PogoMetaClassSite.java:57)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+	at org.codehaus.gant.GantBinding$_initializeGantBinding_closure5_closure16_closure18.doCall(GantBinding.groovy:185)
+	at sun.reflect.GeneratedMethodAccessor73.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSite.invoke(PogoMetaMethodSite.java:169)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:59)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:166)
+	at org.codehaus.gant.GantBinding$_initializeGantBinding_closure5_closure16_closure18.doCall(GantBinding.groovy)
+	at sun.reflect.GeneratedMethodAccessor72.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:210)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.call(PogoMetaMethodSite.java:71)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:117)
+	at org.codehaus.gant.GantBinding.withTargetEvent(GantBinding.groovy:90)
+	at org.codehaus.gant.GantBinding.this$4$withTargetEvent(GantBinding.groovy)
+	at sun.reflect.GeneratedMethodAccessor67.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:93)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1218)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1125)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1027)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1163)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1125)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1027)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:815)
+	at groovy.lang.GroovyObjectSupport.invokeMethod(GroovyObjectSupport.java:46)
+	at groovy.lang.MetaClassImpl.invokeMethodOnGroovyObject(MetaClassImpl.java:1283)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1177)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1125)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1027)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.callCurrent(PogoMetaClassSite.java:69)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:182)
+	at org.codehaus.gant.GantBinding$_initializeGantBinding_closure5_closure16.doCall(GantBinding.groovy:185)
+	at sun.reflect.GeneratedMethodAccessor66.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSite.invoke(PogoMetaMethodSite.java:169)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:59)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:166)
+	at org.codehaus.gant.GantBinding$_initializeGantBinding_closure5_closure16.doCall(GantBinding.groovy)
+	at sun.reflect.GeneratedMethodAccessor65.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:210)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.call(PogoMetaMethodSite.java:71)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:117)
+	at gant.Gant$_dispatch_closure5.doCall(Gant.groovy:381)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:210)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.call(PogoMetaMethodSite.java:71)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+	at gant.Gant$_dispatch_closure7.doCall(Gant.groovy:415)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSite.invoke(PogoMetaMethodSite.java:169)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:59)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:166)
+	at gant.Gant$_dispatch_closure7.doCall(Gant.groovy)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:210)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.call(PogoMetaMethodSite.java:71)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:117)
+	at gant.Gant.withBuildListeners(Gant.groovy:427)
+	at gant.Gant.this$2$withBuildListeners(Gant.groovy)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:210)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:59)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:52)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:64)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:166)
+	at gant.Gant.dispatch(Gant.groovy:415)
+	at gant.Gant.this$2$dispatch(Gant.groovy)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:93)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1218)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1125)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1027)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:817)
+	at gant.Gant.invokeMethod(Gant.groovy)
+	at groovy.lang.GroovyObject$invokeMethod.callCurrent(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:52)
+	at groovy.lang.GroovyObject$invokeMethod.callCurrent(Unknown Source)
+	at gant.Gant.executeTargets(Gant.groovy:591)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSite.invoke(PogoMetaMethodSite.java:169)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:59)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:52)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:64)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:174)
+	at gant.Gant.executeTargets(Gant.groovy:590)
+	at org.codehaus.groovy.grails.cli.GrailsScriptRunner.executeWithGantInstance(GrailsScriptRunner.java:779)
+	at org.codehaus.groovy.grails.cli.GrailsScriptRunner.executeScriptFile(GrailsScriptRunner.java:571)
+	at org.codehaus.groovy.grails.cli.GrailsScriptRunner.executeScriptWithCaching(GrailsScriptRunner.java:470)
+	at org.codehaus.groovy.grails.cli.GrailsScriptRunner.executeScriptWithCaching(GrailsScriptRunner.java:421)
+	at org.grails.ide.api.impl.GrailsConnectorImpl.executeCommand(GrailsConnectorImpl.java:160)
+	at org.grails.ide.eclipse.longrunning.process.GrailsProcess.run(GrailsProcess.java:130)
+	at org.grails.ide.eclipse.longrunning.process.GrailsProcess.main(GrailsProcess.java:93)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.codehaus.groovy.grails.cli.support.GrailsStarter.rootLoader(GrailsStarter.java:236)
+	at org.codehaus.groovy.grails.cli.support.GrailsStarter.main(GrailsStarter.java:264)
+1 error
+Error |
+org.codehaus.groovy.grails.cli.ScriptExitException
+Error |
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+Error |
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+Error |
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+Error |
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+Error |
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:83)
+Error |
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:105)
+Error |
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:255)
+Error |
+	at gant.Gant$_dispatch_closure5.doCall(Gant.groovy:391)
+Error |
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+Error |
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+Error |
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+Error |
+	at java.lang.reflect.Method.invoke(Unknown Source)
+Error |
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:210)
+Error |
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.call(PogoMetaMethodSite.java:71)
+Error |
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+Error |
+	at gant.Gant$_dispatch_closure7.doCall(Gant.groovy:415)
+Error |
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+Error |
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+Error |
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+Error |
+	at java.lang.reflect.Method.invoke(Unknown Source)
+Error |
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSite.invoke(PogoMetaMethodSite.java:169)
+Error |
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:59)
+Error |
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:166)
+Error |
+	at gant.Gant$_dispatch_closure7.doCall(Gant.groovy)
+Error |
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+Error |
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+Error |
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+Error |
+	at java.lang.reflect.Method.invoke(Unknown Source)
+Error |
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:210)
+Error |
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.call(PogoMetaMethodSite.java:71)
+Error |
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:117)
+Error |
+	at gant.Gant.withBuildListeners(Gant.groovy:427)
+Error |
+	at gant.Gant.this$2$withBuildListeners(Gant.groovy)
+Error |
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+Error |
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+Error |
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+Error |
+	at java.lang.reflect.Method.invoke(Unknown Source)
+Error |
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:210)
+Error |
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:59)
+Error |
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:52)
+Error |
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:64)
+Error |
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:166)
+Error |
+	at gant.Gant.dispatch(Gant.groovy:415)
+Error |
+	at gant.Gant.this$2$dispatch(Gant.groovy)
+Error |
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+Error |
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+Error |
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+Error |
+	at java.lang.reflect.Method.invoke(Unknown Source)
+Error |
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:93)
+Error |
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)
+Error |
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1218)
+Error |
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1125)
+Error |
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1027)
+Error |
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:817)
+Error |
+	at gant.Gant.invokeMethod(Gant.groovy)
+Error |
+	at groovy.lang.GroovyObject$invokeMethod.callCurrent(Unknown Source)
+Error |
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:52)
+Error |
+	at groovy.lang.GroovyObject$invokeMethod.callCurrent(Unknown Source)
+Error |
+	at gant.Gant.executeTargets(Gant.groovy:591)
+Error |
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+Error |
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+Error |
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+Error |
+	at java.lang.reflect.Method.invoke(Unknown Source)
+Error |
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSite.invoke(PogoMetaMethodSite.java:169)
+Error |
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:59)
+Error |
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:52)
+Error |
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:64)
+Error |
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:174)
+Error |
+	at gant.Gant.executeTargets(Gant.groovy:590)
+Error |
+	at org.codehaus.groovy.grails.cli.GrailsScriptRunner.executeWithGantInstance(GrailsScriptRunner.java:779)
+Error |
+	at org.codehaus.groovy.grails.cli.GrailsScriptRunner.executeScriptFile(GrailsScriptRunner.java:571)
+Error |
+	at org.codehaus.groovy.grails.cli.GrailsScriptRunner.executeScriptWithCaching(GrailsScriptRunner.java:470)
+Error |
+	at org.codehaus.groovy.grails.cli.GrailsScriptRunner.executeScriptWithCaching(GrailsScriptRunner.java:421)
+Error |
+	at org.grails.ide.api.impl.GrailsConnectorImpl.executeCommand(GrailsConnectorImpl.java:160)
+Error |
+	at org.grails.ide.eclipse.longrunning.process.GrailsProcess.run(GrailsProcess.java:130)
+Error |
+	at org.grails.ide.eclipse.longrunning.process.GrailsProcess.main(GrailsProcess.java:93)
+Error |
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+Error |
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+Error |
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+Error |
+	at java.lang.reflect.Method.invoke(Unknown Source)
+Error |
+	at org.codehaus.groovy.grails.cli.support.GrailsStarter.rootLoader(GrailsStarter.java:236)
+Error |
+	at org.codehaus.groovy.grails.cli.support.GrailsStarter.main(GrailsStarter.java:264)
+Error |
+Caused by: org.codehaus.groovy.grails.cli.ScriptExitException
+Error |
+	at org.codehaus.groovy.grails.cli.api.BaseSettingsApi.exit(BaseSettingsApi.java:360)
+Error |
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+Error |
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+Error |
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+Error |
+	at java.lang.reflect.Method.invoke(Unknown Source)
+Error |
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:93)
+Error |
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)
+Error |
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1218)
+Error |
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1125)
+Error |
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1085)
+Error |
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1125)
+Error |
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1027)
+Error |
+	at groovy.lang.MetaClassImpl.invokePropertyOrMissing(MetaClassImpl.java:1264)
+Error |
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1220)
+Error |
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1125)
+Error |
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1027)
+Error |
+	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.callCurrent(PogoMetaClassSite.java:69)
+Error |
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:166)
+Error |
+	at _GrailsCompile.withCompilationErrorHandling(_GrailsCompile.groovy:77)
+Error |
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+Error |
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+Error |
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+Error |
+	at java.lang.reflect.Method.invoke(Unknown Source)
+Error |
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:93)
+Error |
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)
+Error |
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1218)
+Error |
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1125)
+Error |
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1027)
+Error |
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1163)
+Error |
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1125)
+Error |
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1027)
+Error |
+	at groovy.lang.DelegatingMetaClass.invokeMethod(DelegatingMetaClass.java:151)
+Error |
+	at org.codehaus.gant.GantMetaClass.invokeMethod(GantMetaClass.java:133)
+Error |
+	at org.codehaus.gant.GantMetaClass.invokeMethod(GantMetaClass.java:168)
+Error |
+	at groovy.lang.GroovyObjectSupport.invokeMethod(GroovyObjectSupport.java:46)
+Error |
+	at groovy.lang.MetaClassImpl.invokeMethodOnGroovyObject(MetaClassImpl.java:1283)
+Error |
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1177)
+Error |
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1125)
+Error |
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1027)
+Error |
+	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.callCurrent(PogoMetaClassSite.java:69)
+Error |
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:166)
+Error |
+	at _GrailsCompile$_run_closure3$_closure8.doCall(_GrailsCompile.groovy:60)
+Error |
+	at _GrailsCompile$_run_closure3$_closure8.doCall(_GrailsCompile.groovy)
+Error |
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+Error |
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+Error |
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+Error |
+	at java.lang.reflect.Method.invoke(Unknown Source)
+Error |
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:93)
+Error |
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)
+Error |
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1218)
+Error |
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1125)
+Error |
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1027)
+Error |
+	at groovy.lang.Closure.call(Closure.java:414)
+Error |
+	at groovy.lang.Closure.call(Closure.java:408)
+Error |
+	at org.codehaus.groovy.grails.cli.api.BaseSettingsApi.profile(BaseSettingsApi.java:332)
+Error |
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+Error |
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+Error |
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+Error |
+	at java.lang.reflect.Method.invoke(Unknown Source)
+Error |
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:93)
+Error |
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)
+Error |
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1218)
+Error |
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1125)
+Error |
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1085)
+Error |
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1125)
+Error |
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1027)
+Error |
+	at groovy.lang.MetaClassImpl.invokePropertyOrMissing(MetaClassImpl.java:1264)
+Error |
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1220)
+Error |
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1125)
+Error |
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1027)
+Error |
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:815)
+Error |
+	at groovy.lang.GroovyObjectSupport.invokeMethod(GroovyObjectSupport.java:46)
+Error |
+	at groovy.lang.Script.invokeMethod(Script.java:80)
+Error |
+	at groovy.lang.MetaClassImpl.invokeMethodOnGroovyObject(MetaClassImpl.java:1283)
+Error |
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1177)
+Error |
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1125)
+Error |
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1027)
+Error |
+	at groovy.lang.DelegatingMetaClass.invokeMethod(DelegatingMetaClass.java:151)
+Error |
+	at org.codehaus.gant.GantMetaClass.invokeMethod(GantMetaClass.java:133)
+Error |
+	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.callCurrent(PogoMetaClassSite.java:69)
+Error |
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:52)
+Error |
+	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.callCurrent(PogoMetaClassSite.java:84)
+Error |
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:174)
+Error |
+	at _GrailsCompile$_run_closure3.doCall(_GrailsCompile.groovy:57)
+Error |
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+Error |
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+Error |
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+Error |
+	at java.lang.reflect.Method.invoke(Unknown Source)
+Error |
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:93)
+Error |
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)
+Error |
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1218)
+Error |
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1125)
+Error |
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1027)
+Error |
+	at groovy.lang.DelegatingMetaClass.invokeMethod(DelegatingMetaClass.java:151)
+Error |
+	at org.codehaus.gant.GantMetaClass.invokeMethod(GantMetaClass.java:133)
+Error |
+	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.call(PogoMetaClassSite.java:42)
+Error |
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:48)
+Error |
+	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.call(PogoMetaClassSite.java:57)
+Error |
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+Error |
+	at org.codehaus.gant.GantBinding$_initializeGantBinding_closure5_closure16_closure18.doCall(GantBinding.groovy:185)
+Error |
+	at sun.reflect.GeneratedMethodAccessor73.invoke(Unknown Source)
+Error |
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+Error |
+	at java.lang.reflect.Method.invoke(Unknown Source)
+Error |
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSite.invoke(PogoMetaMethodSite.java:169)
+Error |
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:59)
+Error |
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:166)
+Error |
+	at org.codehaus.gant.GantBinding$_initializeGantBinding_closure5_closure16_closure18.doCall(GantBinding.groovy)
+Error |
+	at sun.reflect.GeneratedMethodAccessor72.invoke(Unknown Source)
+Error |
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+Error |
+	at java.lang.reflect.Method.invoke(Unknown Source)
+Error |
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:210)
+Error |
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.call(PogoMetaMethodSite.java:71)
+Error |
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:117)
+Error |
+	at org.codehaus.gant.GantBinding.withTargetEvent(GantBinding.groovy:90)
+Error |
+	at org.codehaus.gant.GantBinding.this$4$withTargetEvent(GantBinding.groovy)
+Error |
+	at sun.reflect.GeneratedMethodAccessor67.invoke(Unknown Source)
+Error |
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+Error |
+	at java.lang.reflect.Method.invoke(Unknown Source)
+Error |
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:93)
+Error |
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)
+Error |
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1218)
+Error |
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1125)
+Error |
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1027)
+Error |
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1163)
+Error |
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1125)
+Error |
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1027)
+Error |
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:815)
+Error |
+	at groovy.lang.GroovyObjectSupport.invokeMethod(GroovyObjectSupport.java:46)
+Error |
+	at groovy.lang.MetaClassImpl.invokeMethodOnGroovyObject(MetaClassImpl.java:1283)
+Error |
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1177)
+Error |
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1125)
+Error |
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1027)
+Error |
+	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.callCurrent(PogoMetaClassSite.java:69)
+Error |
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:182)
+Error |
+	at org.codehaus.gant.GantBinding$_initializeGantBinding_closure5_closure16.doCall(GantBinding.groovy:185)
+Error |
+	at sun.reflect.GeneratedMethodAccessor66.invoke(Unknown Source)
+Error |
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+Error |
+	at java.lang.reflect.Method.invoke(Unknown Source)
+Error |
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSite.invoke(PogoMetaMethodSite.java:169)
+Error |
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:59)
+Error |
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:166)
+Error |
+	at org.codehaus.gant.GantBinding$_initializeGantBinding_closure5_closure16.doCall(GantBinding.groovy)
+Error |
+	at sun.reflect.GeneratedMethodAccessor65.invoke(Unknown Source)
+Error |
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+Error |
+	at java.lang.reflect.Method.invoke(Unknown Source)
+Error |
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:93)
+Error |
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)
+Error |
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1218)
+Error |
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1125)
+Error |
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1027)
+Error |
+	at groovy.lang.Closure.call(Closure.java:414)
+Error |
+	at groovy.lang.Closure.call(Closure.java:408)
+Error |
+	at org.codehaus.gant.GantMetaClass.processClosure(GantMetaClass.java:81)
+Error |
+	at org.codehaus.gant.GantMetaClass.processArgument(GantMetaClass.java:95)
+Error |
+	at org.codehaus.gant.GantMetaClass.invokeMethod(GantMetaClass.java:128)
+Error |
+	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.callCurrent(PogoMetaClassSite.java:69)
+Error |
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:52)
+Error |
+	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.callCurrent(PogoMetaClassSite.java:84)
+Error |
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:166)
+Error |
+	at _GrailsCompile$_run_closure2.doCall(_GrailsCompile.groovy:44)
+Error |
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+Error |
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+Error |
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+Error |
+	at java.lang.reflect.Method.invoke(Unknown Source)
+Error |
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:93)
+Error |
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)
+Error |
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1218)
+Error |
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1125)
+Error |
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1027)
+Error |
+	at groovy.lang.DelegatingMetaClass.invokeMethod(DelegatingMetaClass.java:151)
+Error |
+	at org.codehaus.gant.GantMetaClass.invokeMethod(GantMetaClass.java:133)
+Error |
+	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.call(PogoMetaClassSite.java:42)
+Error |
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:48)
+Error |
+	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.call(PogoMetaClassSite.java:57)
+Error |
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+Error |
+	at org.codehaus.gant.GantBinding$_initializeGantBinding_closure5_closure16_closure18.doCall(GantBinding.groovy:185)
+Error |
+	at sun.reflect.GeneratedMethodAccessor73.invoke(Unknown Source)
+Error |
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+Error |
+	at java.lang.reflect.Method.invoke(Unknown Source)
+Error |
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSite.invoke(PogoMetaMethodSite.java:169)
+Error |
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:59)
+Error |
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:166)
+Error |
+	at org.codehaus.gant.GantBinding$_initializeGantBinding_closure5_closure16_closure18.doCall(GantBinding.groovy)
+Error |
+	at sun.reflect.GeneratedMethodAccessor72.invoke(Unknown Source)
+Error |
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+Error |
+	at java.lang.reflect.Method.invoke(Unknown Source)
+Error |
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:210)
+Error |
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.call(PogoMetaMethodSite.java:71)
+Error |
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:117)
+Error |
+	at org.codehaus.gant.GantBinding.withTargetEvent(GantBinding.groovy:90)
+Error |
+	at org.codehaus.gant.GantBinding.this$4$withTargetEvent(GantBinding.groovy)
+Error |
+	at sun.reflect.GeneratedMethodAccessor67.invoke(Unknown Source)
+Error |
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+Error |
+	at java.lang.reflect.Method.invoke(Unknown Source)
+Error |
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:93)
+Error |
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)
+Error |
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1218)
+Error |
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1125)
+Error |
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1027)
+Error |
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1163)
+Error |
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1125)
+Error |
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1027)
+Error |
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:815)
+Error |
+	at groovy.lang.GroovyObjectSupport.invokeMethod(GroovyObjectSupport.java:46)
+Error |
+	at groovy.lang.MetaClassImpl.invokeMethodOnGroovyObject(MetaClassImpl.java:1283)
+Error |
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1177)
+Error |
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1125)
+Error |
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1027)
+Error |
+	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.callCurrent(PogoMetaClassSite.java:69)
+Error |
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:182)
+Error |
+	at org.codehaus.gant.GantBinding$_initializeGantBinding_closure5_closure16.doCall(GantBinding.groovy:185)
+Error |
+	at sun.reflect.GeneratedMethodAccessor66.invoke(Unknown Source)
+Error |
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+Error |
+	at java.lang.reflect.Method.invoke(Unknown Source)
+Error |
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSite.invoke(PogoMetaMethodSite.java:169)
+Error |
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:59)
+Error |
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:166)
+Error |
+	at org.codehaus.gant.GantBinding$_initializeGantBinding_closure5_closure16.doCall(GantBinding.groovy)
+Error |
+	at sun.reflect.GeneratedMethodAccessor65.invoke(Unknown Source)
+Error |
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+Error |
+	at java.lang.reflect.Method.invoke(Unknown Source)
+Error |
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:210)
+Error |
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.call(PogoMetaMethodSite.java:71)
+Error |
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:117)
+Error |
+	at gant.Gant$_dispatch_closure5.doCall(Gant.groovy:381)
+Error |
+	... 74 more
+---- System.err ----
+  [groovyc] org.codehaus.groovy.control.MultipleCompilationErrorsException: startup failed:
+  [groovyc] General error during semantic analysis: unable to locate the java compiler com.sun.tools.javac.Main, please change your classloader settings
+  [groovyc] 
+  [groovyc] java.lang.ClassNotFoundException: unable to locate the java compiler com.sun.tools.javac.Main, please change your classloader settings
+  [groovyc] 	at org.codehaus.groovy.tools.javac.JavacJavaCompiler.findJavac(JavacJavaCompiler.java:191)
+  [groovyc] 	at org.codehaus.groovy.tools.javac.JavacJavaCompiler.compile(JavacJavaCompiler.java:51)
+  [groovyc] 	at org.codehaus.groovy.tools.javac.JavaAwareCompilationUnit.gotoPhase(JavaAwareCompilationUnit.java:105)
+  [groovyc] 	at org.codehaus.groovy.control.CompilationUnit.compile(CompilationUnit.java:568)
+  [groovyc] 	at org.codehaus.groovy.control.CompilationUnit.compile(CompilationUnit.java:537)
+  [groovyc] 	at org.codehaus.groovy.tools.FileSystemCompiler.compile(FileSystemCompiler.java:61)
+  [groovyc] 	at org.codehaus.groovy.tools.FileSystemCompiler.doCompilation(FileSystemCompiler.java:217)
+  [groovyc] 	at org.codehaus.groovy.ant.Groovyc.runCompiler(Groovyc.java:1165)
+  [groovyc] 	at org.codehaus.groovy.ant.Groovyc.compile(Groovyc.java:1216)
+  [groovyc] 	at org.codehaus.groovy.grails.compiler.Grailsc.compile(Grailsc.java:78)
+  [groovyc] 	at org.codehaus.groovy.ant.Groovyc.execute(Groovyc.java:831)
+  [groovyc] 	at org.apache.tools.ant.UnknownElement.execute(UnknownElement.java:292)
+  [groovyc] 	at sun.reflect.GeneratedMethodAccessor46.invoke(Unknown Source)
+  [groovyc] 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+  [groovyc] 	at java.lang.reflect.Method.invoke(Unknown Source)
+  [groovyc] 	at org.apache.tools.ant.dispatch.DispatchUtils.execute(DispatchUtils.java:106)
+  [groovyc] 	at groovy.util.AntBuilder.performTask(AntBuilder.java:327)
+  [groovyc] 	at groovy.util.AntBuilder.nodeCompleted(AntBuilder.java:272)
+  [groovyc] 	at groovy.util.BuilderSupport.doInvokeMethod(BuilderSupport.java:154)
+  [groovyc] 	at groovy.util.AntBuilder.doInvokeMethod(AntBuilder.java:207)
+  [groovyc] 	at groovy.util.BuilderSupport.invokeMethod(BuilderSupport.java:67)
+  [groovyc] 	at org.codehaus.gant.GantBuilder.invokeMethod(GantBuilder.java:99)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.call(PogoMetaClassSite.java:48)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:133)
+  [groovyc] 	at org.codehaus.groovy.grails.project.compiler.GrailsProjectCompiler.compilePluginSources(GrailsProjectCompiler.groovy:380)
+  [groovyc] 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  [groovyc] 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+  [groovyc] 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+  [groovyc] 	at java.lang.reflect.Method.invoke(Unknown Source)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:210)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:59)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:174)
+  [groovyc] 	at org.codehaus.groovy.grails.project.compiler.GrailsProjectCompiler.compilePlugins(GrailsProjectCompiler.groovy:346)
+  [groovyc] 	at org.codehaus.groovy.grails.project.compiler.GrailsProjectCompiler$compilePlugins$2.callCurrent(Unknown Source)
+  [groovyc] 	at org.codehaus.groovy.grails.project.compiler.GrailsProjectCompiler.compilePlugins(GrailsProjectCompiler.groovy:314)
+  [groovyc] 	at org.codehaus.groovy.grails.project.compiler.GrailsProjectCompiler$compilePlugins$1.call(Unknown Source)
+  [groovyc] 	at _GrailsCompile$_run_closure3$_closure8$_closure9.doCall(_GrailsCompile.groovy:61)
+  [groovyc] 	at _GrailsCompile$_run_closure3$_closure8$_closure9.doCall(_GrailsCompile.groovy)
+  [groovyc] 	at _GrailsCompile$_run_closure3$_closure8$_closure9$doCall.call(Unknown Source)
+  [groovyc] 	at _GrailsCompile.withCompilationErrorHandling(_GrailsCompile.groovy:68)
+  [groovyc] 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  [groovyc] 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+  [groovyc] 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+  [groovyc] 	at java.lang.reflect.Method.invoke(Unknown Source)
+  [groovyc] 	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:93)
+  [groovyc] 	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)
+  [groovyc] 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1218)
+  [groovyc] 	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1125)
+  [groovyc] 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1027)
+  [groovyc] 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1163)
+  [groovyc] 	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1125)
+  [groovyc] 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1027)
+  [groovyc] 	at groovy.lang.DelegatingMetaClass.invokeMethod(DelegatingMetaClass.java:151)
+  [groovyc] 	at org.codehaus.gant.GantMetaClass.invokeMethod(GantMetaClass.java:133)
+  [groovyc] 	at org.codehaus.gant.GantMetaClass.invokeMethod(GantMetaClass.java:168)
+  [groovyc] 	at groovy.lang.GroovyObjectSupport.invokeMethod(GroovyObjectSupport.java:46)
+  [groovyc] 	at groovy.lang.MetaClassImpl.invokeMethodOnGroovyObject(MetaClassImpl.java:1283)
+  [groovyc] 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1177)
+  [groovyc] 	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1125)
+  [groovyc] 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1027)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.callCurrent(PogoMetaClassSite.java:69)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:166)
+  [groovyc] 	at _GrailsCompile$_run_closure3$_closure8.doCall(_GrailsCompile.groovy:60)
+  [groovyc] 	at _GrailsCompile$_run_closure3$_closure8.doCall(_GrailsCompile.groovy)
+  [groovyc] 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  [groovyc] 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+  [groovyc] 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+  [groovyc] 	at java.lang.reflect.Method.invoke(Unknown Source)
+  [groovyc] 	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:93)
+  [groovyc] 	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)
+  [groovyc] 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1218)
+  [groovyc] 	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1125)
+  [groovyc] 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1027)
+  [groovyc] 	at groovy.lang.Closure.call(Closure.java:414)
+  [groovyc] 	at groovy.lang.Closure.call(Closure.java:408)
+  [groovyc] 	at org.codehaus.groovy.grails.cli.api.BaseSettingsApi.profile(BaseSettingsApi.java:332)
+  [groovyc] 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  [groovyc] 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+  [groovyc] 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+  [groovyc] 	at java.lang.reflect.Method.invoke(Unknown Source)
+  [groovyc] 	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:93)
+  [groovyc] 	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)
+  [groovyc] 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1218)
+  [groovyc] 	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1125)
+  [groovyc] 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1085)
+  [groovyc] 	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1125)
+  [groovyc] 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1027)
+  [groovyc] 	at groovy.lang.MetaClassImpl.invokePropertyOrMissing(MetaClassImpl.java:1264)
+  [groovyc] 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1220)
+  [groovyc] 	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1125)
+  [groovyc] 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1027)
+  [groovyc] 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:815)
+  [groovyc] 	at groovy.lang.GroovyObjectSupport.invokeMethod(GroovyObjectSupport.java:46)
+  [groovyc] 	at groovy.lang.Script.invokeMethod(Script.java:80)
+  [groovyc] 	at groovy.lang.MetaClassImpl.invokeMethodOnGroovyObject(MetaClassImpl.java:1283)
+  [groovyc] 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1177)
+  [groovyc] 	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1125)
+  [groovyc] 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1027)
+  [groovyc] 	at groovy.lang.DelegatingMetaClass.invokeMethod(DelegatingMetaClass.java:151)
+  [groovyc] 	at org.codehaus.gant.GantMetaClass.invokeMethod(GantMetaClass.java:133)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.callCurrent(PogoMetaClassSite.java:69)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:52)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.callCurrent(PogoMetaClassSite.java:84)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:174)
+  [groovyc] 	at _GrailsCompile$_run_closure3.doCall(_GrailsCompile.groovy:57)
+  [groovyc] 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  [groovyc] 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+  [groovyc] 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+  [groovyc] 	at java.lang.reflect.Method.invoke(Unknown Source)
+  [groovyc] 	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:93)
+  [groovyc] 	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)
+  [groovyc] 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1218)
+  [groovyc] 	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1125)
+  [groovyc] 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1027)
+  [groovyc] 	at groovy.lang.DelegatingMetaClass.invokeMethod(DelegatingMetaClass.java:151)
+  [groovyc] 	at org.codehaus.gant.GantMetaClass.invokeMethod(GantMetaClass.java:133)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.call(PogoMetaClassSite.java:42)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:48)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.call(PogoMetaClassSite.java:57)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+  [groovyc] 	at org.codehaus.gant.GantBinding$_initializeGantBinding_closure5_closure16_closure18.doCall(GantBinding.groovy:185)
+  [groovyc] 	at sun.reflect.GeneratedMethodAccessor73.invoke(Unknown Source)
+  [groovyc] 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+  [groovyc] 	at java.lang.reflect.Method.invoke(Unknown Source)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSite.invoke(PogoMetaMethodSite.java:169)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:59)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:166)
+  [groovyc] 	at org.codehaus.gant.GantBinding$_initializeGantBinding_closure5_closure16_closure18.doCall(GantBinding.groovy)
+  [groovyc] 	at sun.reflect.GeneratedMethodAccessor72.invoke(Unknown Source)
+  [groovyc] 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+  [groovyc] 	at java.lang.reflect.Method.invoke(Unknown Source)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:210)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.call(PogoMetaMethodSite.java:71)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:117)
+  [groovyc] 	at org.codehaus.gant.GantBinding.withTargetEvent(GantBinding.groovy:90)
+  [groovyc] 	at org.codehaus.gant.GantBinding.this$4$withTargetEvent(GantBinding.groovy)
+  [groovyc] 	at sun.reflect.GeneratedMethodAccessor67.invoke(Unknown Source)
+  [groovyc] 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+  [groovyc] 	at java.lang.reflect.Method.invoke(Unknown Source)
+  [groovyc] 	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:93)
+  [groovyc] 	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)
+  [groovyc] 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1218)
+  [groovyc] 	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1125)
+  [groovyc] 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1027)
+  [groovyc] 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1163)
+  [groovyc] 	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1125)
+  [groovyc] 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1027)
+  [groovyc] 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:815)
+  [groovyc] 	at groovy.lang.GroovyObjectSupport.invokeMethod(GroovyObjectSupport.java:46)
+  [groovyc] 	at groovy.lang.MetaClassImpl.invokeMethodOnGroovyObject(MetaClassImpl.java:1283)
+  [groovyc] 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1177)
+  [groovyc] 	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1125)
+  [groovyc] 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1027)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.callCurrent(PogoMetaClassSite.java:69)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:182)
+  [groovyc] 	at org.codehaus.gant.GantBinding$_initializeGantBinding_closure5_closure16.doCall(GantBinding.groovy:185)
+  [groovyc] 	at sun.reflect.GeneratedMethodAccessor66.invoke(Unknown Source)
+  [groovyc] 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+  [groovyc] 	at java.lang.reflect.Method.invoke(Unknown Source)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSite.invoke(PogoMetaMethodSite.java:169)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:59)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:166)
+  [groovyc] 	at org.codehaus.gant.GantBinding$_initializeGantBinding_closure5_closure16.doCall(GantBinding.groovy)
+  [groovyc] 	at sun.reflect.GeneratedMethodAccessor65.invoke(Unknown Source)
+  [groovyc] 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+  [groovyc] 	at java.lang.reflect.Method.invoke(Unknown Source)
+  [groovyc] 	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:93)
+  [groovyc] 	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)
+  [groovyc] 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1218)
+  [groovyc] 	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1125)
+  [groovyc] 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1027)
+  [groovyc] 	at groovy.lang.Closure.call(Closure.java:414)
+  [groovyc] 	at groovy.lang.Closure.call(Closure.java:408)
+  [groovyc] 	at org.codehaus.gant.GantMetaClass.processClosure(GantMetaClass.java:81)
+  [groovyc] 	at org.codehaus.gant.GantMetaClass.processArgument(GantMetaClass.java:95)
+  [groovyc] 	at org.codehaus.gant.GantMetaClass.invokeMethod(GantMetaClass.java:128)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.callCurrent(PogoMetaClassSite.java:69)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:52)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.callCurrent(PogoMetaClassSite.java:84)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:166)
+  [groovyc] 	at _GrailsCompile$_run_closure2.doCall(_GrailsCompile.groovy:44)
+  [groovyc] 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  [groovyc] 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+  [groovyc] 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+  [groovyc] 	at java.lang.reflect.Method.invoke(Unknown Source)
+  [groovyc] 	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:93)
+  [groovyc] 	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)
+  [groovyc] 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1218)
+  [groovyc] 	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1125)
+  [groovyc] 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1027)
+  [groovyc] 	at groovy.lang.DelegatingMetaClass.invokeMethod(DelegatingMetaClass.java:151)
+  [groovyc] 	at org.codehaus.gant.GantMetaClass.invokeMethod(GantMetaClass.java:133)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.call(PogoMetaClassSite.java:42)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:48)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.call(PogoMetaClassSite.java:57)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+  [groovyc] 	at org.codehaus.gant.GantBinding$_initializeGantBinding_closure5_closure16_closure18.doCall(GantBinding.groovy:185)
+  [groovyc] 	at sun.reflect.GeneratedMethodAccessor73.invoke(Unknown Source)
+  [groovyc] 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+  [groovyc] 	at java.lang.reflect.Method.invoke(Unknown Source)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSite.invoke(PogoMetaMethodSite.java:169)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:59)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:166)
+  [groovyc] 	at org.codehaus.gant.GantBinding$_initializeGantBinding_closure5_closure16_closure18.doCall(GantBinding.groovy)
+  [groovyc] 	at sun.reflect.GeneratedMethodAccessor72.invoke(Unknown Source)
+  [groovyc] 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+  [groovyc] 	at java.lang.reflect.Method.invoke(Unknown Source)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:210)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.call(PogoMetaMethodSite.java:71)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:117)
+  [groovyc] 	at org.codehaus.gant.GantBinding.withTargetEvent(GantBinding.groovy:90)
+  [groovyc] 	at org.codehaus.gant.GantBinding.this$4$withTargetEvent(GantBinding.groovy)
+  [groovyc] 	at sun.reflect.GeneratedMethodAccessor67.invoke(Unknown Source)
+  [groovyc] 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+  [groovyc] 	at java.lang.reflect.Method.invoke(Unknown Source)
+  [groovyc] 	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:93)
+  [groovyc] 	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)
+  [groovyc] 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1218)
+  [groovyc] 	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1125)
+  [groovyc] 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1027)
+  [groovyc] 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1163)
+  [groovyc] 	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1125)
+  [groovyc] 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1027)
+  [groovyc] 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:815)
+  [groovyc] 	at groovy.lang.GroovyObjectSupport.invokeMethod(GroovyObjectSupport.java:46)
+  [groovyc] 	at groovy.lang.MetaClassImpl.invokeMethodOnGroovyObject(MetaClassImpl.java:1283)
+  [groovyc] 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1177)
+  [groovyc] 	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1125)
+  [groovyc] 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1027)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.callCurrent(PogoMetaClassSite.java:69)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:182)
+  [groovyc] 	at org.codehaus.gant.GantBinding$_initializeGantBinding_closure5_closure16.doCall(GantBinding.groovy:185)
+  [groovyc] 	at sun.reflect.GeneratedMethodAccessor66.invoke(Unknown Source)
+  [groovyc] 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+  [groovyc] 	at java.lang.reflect.Method.invoke(Unknown Source)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSite.invoke(PogoMetaMethodSite.java:169)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:59)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:166)
+  [groovyc] 	at org.codehaus.gant.GantBinding$_initializeGantBinding_closure5_closure16.doCall(GantBinding.groovy)
+  [groovyc] 	at sun.reflect.GeneratedMethodAccessor65.invoke(Unknown Source)
+  [groovyc] 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+  [groovyc] 	at java.lang.reflect.Method.invoke(Unknown Source)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:210)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.call(PogoMetaMethodSite.java:71)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:117)
+  [groovyc] 	at gant.Gant$_dispatch_closure5.doCall(Gant.groovy:381)
+  [groovyc] 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  [groovyc] 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+  [groovyc] 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+  [groovyc] 	at java.lang.reflect.Method.invoke(Unknown Source)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:210)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.call(PogoMetaMethodSite.java:71)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+  [groovyc] 	at gant.Gant$_dispatch_closure7.doCall(Gant.groovy:415)
+  [groovyc] 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  [groovyc] 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+  [groovyc] 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+  [groovyc] 	at java.lang.reflect.Method.invoke(Unknown Source)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSite.invoke(PogoMetaMethodSite.java:169)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:59)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:166)
+  [groovyc] 	at gant.Gant$_dispatch_closure7.doCall(Gant.groovy)
+  [groovyc] 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  [groovyc] 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+  [groovyc] 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+  [groovyc] 	at java.lang.reflect.Method.invoke(Unknown Source)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:210)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.call(PogoMetaMethodSite.java:71)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:117)
+  [groovyc] 	at gant.Gant.withBuildListeners(Gant.groovy:427)
+  [groovyc] 	at gant.Gant.this$2$withBuildListeners(Gant.groovy)
+  [groovyc] 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  [groovyc] 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+  [groovyc] 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+  [groovyc] 	at java.lang.reflect.Method.invoke(Unknown Source)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:210)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:59)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:52)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:64)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:166)
+  [groovyc] 	at gant.Gant.dispatch(Gant.groovy:415)
+  [groovyc] 	at gant.Gant.this$2$dispatch(Gant.groovy)
+  [groovyc] 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  [groovyc] 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+  [groovyc] 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+  [groovyc] 	at java.lang.reflect.Method.invoke(Unknown Source)
+  [groovyc] 	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:93)
+  [groovyc] 	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)
+  [groovyc] 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1218)
+  [groovyc] 	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1125)
+  [groovyc] 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1027)
+  [groovyc] 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:817)
+  [groovyc] 	at gant.Gant.invokeMethod(Gant.groovy)
+  [groovyc] 	at groovy.lang.GroovyObject$invokeMethod.callCurrent(Unknown Source)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:52)
+  [groovyc] 	at groovy.lang.GroovyObject$invokeMethod.callCurrent(Unknown Source)
+  [groovyc] 	at gant.Gant.executeTargets(Gant.groovy:591)
+  [groovyc] 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  [groovyc] 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+  [groovyc] 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+  [groovyc] 	at java.lang.reflect.Method.invoke(Unknown Source)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSite.invoke(PogoMetaMethodSite.java:169)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:59)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:52)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:64)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:174)
+  [groovyc] 	at gant.Gant.executeTargets(Gant.groovy:590)
+  [groovyc] 	at org.codehaus.groovy.grails.cli.GrailsScriptRunner.executeWithGantInstance(GrailsScriptRunner.java:779)
+  [groovyc] 	at org.codehaus.groovy.grails.cli.GrailsScriptRunner.executeScriptFile(GrailsScriptRunner.java:571)
+  [groovyc] 	at org.codehaus.groovy.grails.cli.GrailsScriptRunner.executeScriptWithCaching(GrailsScriptRunner.java:470)
+  [groovyc] 	at org.codehaus.groovy.grails.cli.GrailsScriptRunner.executeScriptWithCaching(GrailsScriptRunner.java:421)
+  [groovyc] 	at org.grails.ide.api.impl.GrailsConnectorImpl.executeCommand(GrailsConnectorImpl.java:160)
+  [groovyc] 	at org.grails.ide.eclipse.longrunning.process.GrailsProcess.run(GrailsProcess.java:130)
+  [groovyc] 	at org.grails.ide.eclipse.longrunning.process.GrailsProcess.main(GrailsProcess.java:93)
+  [groovyc] 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  [groovyc] 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+  [groovyc] 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+  [groovyc] 	at java.lang.reflect.Method.invoke(Unknown Source)
+  [groovyc] 	at org.codehaus.groovy.grails.cli.support.GrailsStarter.rootLoader(GrailsStarter.java:236)
+  [groovyc] 	at org.codehaus.groovy.grails.cli.support.GrailsStarter.main(GrailsStarter.java:264)
+  [groovyc] 
+  [groovyc] 1 error
+
+
+	at org.grails.ide.eclipse.core.launch.SynchLaunch$LaunchResult.getException(SynchLaunch.java:150)
+	at org.grails.ide.eclipse.core.launch.SynchLaunch$ResultFromTerminatedLaunch.getStatus(SynchLaunch.java:269)
+	at org.grails.ide.eclipse.core.launch.SynchLaunch$LaunchResult.getCoreException(SynchLaunch.java:168)
+	at org.grails.ide.eclipse.longrunning.client.GrailsCommandExecution.execute(GrailsCommandExecution.java:113)
+	at org.grails.ide.eclipse.longrunning.LongRunningProcessGrailsExecutor.synchExec(LongRunningProcessGrailsExecutor.java:82)
+	at org.grails.ide.eclipse.commands.GrailsCommand.synchExec(GrailsCommand.java:171)
+	at org.grails.ide.eclipse.commands.GrailsCommandUtils.refreshDependencies(GrailsCommandUtils.java:333)
+	at org.grails.ide.eclipse.core.internal.classpath.GrailsClasspathContainerUpdateJob.runInWorkspace(GrailsClasspathContainerUpdateJob.java:89)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:38)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.grails.ide.eclipse.core 4 0 2019-07-31 01:28:54.919
+!MESSAGE ------System.out:-----------
+ Loading Grails 2.5.6
+.
+|Environment set to development
+........
+|Compiling 10 source files
+.Error 
+|
+Compilation error: startup failed:
+General error during semantic analysis: unable to locate the java compiler com.sun.tools.javac.Main, please change your classloader settings
+java.lang.ClassNotFoundException: unable to locate the java compiler com.sun.tools.javac.Main, please change your classloader settings
+	at org.codehaus.groovy.tools.javac.JavacJavaCompiler.findJavac(JavacJavaCompiler.java:191)
+	at org.codehaus.groovy.tools.javac.JavacJavaCompiler.compile(JavacJavaCompiler.java:51)
+	at org.codehaus.groovy.tools.javac.JavaAwareCompilationUnit.gotoPhase(JavaAwareCompilationUnit.java:105)
+	at org.codehaus.groovy.control.CompilationUnit.compile(CompilationUnit.java:568)
+	at org.codehaus.groovy.control.CompilationUnit.compile(CompilationUnit.java:537)
+	at org.codehaus.groovy.tools.FileSystemCompiler.compile(FileSystemCompiler.java:61)
+	at org.codehaus.groovy.tools.FileSystemCompiler.doCompilation(FileSystemCompiler.java:217)
+	at org.codehaus.groovy.ant.Groovyc.runCompiler(Groovyc.java:1165)
+	at org.codehaus.groovy.ant.Groovyc.compile(Groovyc.java:1216)
+	at org.codehaus.groovy.grails.compiler.Grailsc.compile(Grailsc.java:78)
+	at org.codehaus.groovy.ant.Groovyc.execute(Groovyc.java:831)
+	at org.apache.tools.ant.UnknownElement.execute(UnknownElement.java:292)
+	at sun.reflect.GeneratedMethodAccessor46.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.apache.tools.ant.dispatch.DispatchUtils.execute(DispatchUtils.java:106)
+	at groovy.util.AntBuilder.performTask(AntBuilder.java:327)
+	at groovy.util.AntBuilder.nodeCompleted(AntBuilder.java:272)
+	at groovy.util.BuilderSupport.doInvokeMethod(BuilderSupport.java:154)
+	at groovy.util.AntBuilder.doInvokeMethod(AntBuilder.java:207)
+	at groovy.util.BuilderSupport.invokeMethod(BuilderSupport.java:67)
+	at org.codehaus.gant.GantBuilder.invokeMethod(GantBuilder.java:99)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.call(PogoMetaClassSite.java:48)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:133)
+	at org.codehaus.groovy.grails.project.compiler.GrailsProjectCompiler.compilePluginSources(GrailsProjectCompiler.groovy:380)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:210)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:59)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:174)
+	at org.codehaus.groovy.grails.project.compiler.GrailsProjectCompiler.compilePlugins(GrailsProjectCompiler.groovy:346)
+	at org.codehaus.groovy.grails.project.compiler.GrailsProjectCompiler$compilePlugins$2.callCurrent(Unknown Source)
+	at org.codehaus.groovy.grails.project.compiler.GrailsProjectCompiler.compilePlugins(GrailsProjectCompiler.groovy:314)
+	at org.codehaus.groovy.grails.project.compiler.GrailsProjectCompiler$compilePlugins$1.call(Unknown Source)
+	at _GrailsCompile$_run_closure3$_closure8$_closure9.doCall(_GrailsCompile.groovy:61)
+	at _GrailsCompile$_run_closure3$_closure8$_closure9.doCall(_GrailsCompile.groovy)
+	at _GrailsCompile$_run_closure3$_closure8$_closure9$doCall.call(Unknown Source)
+	at _GrailsCompile.withCompilationErrorHandling(_GrailsCompile.groovy:68)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:93)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1218)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1125)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1027)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1163)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1125)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1027)
+	at groovy.lang.DelegatingMetaClass.invokeMethod(DelegatingMetaClass.java:151)
+	at org.codehaus.gant.GantMetaClass.invokeMethod(GantMetaClass.java:133)
+	at org.codehaus.gant.GantMetaClass.invokeMethod(GantMetaClass.java:168)
+	at groovy.lang.GroovyObjectSupport.invokeMethod(GroovyObjectSupport.java:46)
+	at groovy.lang.MetaClassImpl.invokeMethodOnGroovyObject(MetaClassImpl.java:1283)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1177)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1125)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1027)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.callCurrent(PogoMetaClassSite.java:69)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:166)
+	at _GrailsCompile$_run_closure3$_closure8.doCall(_GrailsCompile.groovy:60)
+	at _GrailsCompile$_run_closure3$_closure8.doCall(_GrailsCompile.groovy)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:93)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1218)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1125)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1027)
+	at groovy.lang.Closure.call(Closure.java:414)
+	at groovy.lang.Closure.call(Closure.java:408)
+	at org.codehaus.groovy.grails.cli.api.BaseSettingsApi.profile(BaseSettingsApi.java:332)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:93)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1218)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1125)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1085)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1125)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1027)
+	at groovy.lang.MetaClassImpl.invokePropertyOrMissing(MetaClassImpl.java:1264)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1220)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1125)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1027)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:815)
+	at groovy.lang.GroovyObjectSupport.invokeMethod(GroovyObjectSupport.java:46)
+	at groovy.lang.Script.invokeMethod(Script.java:80)
+	at groovy.lang.MetaClassImpl.invokeMethodOnGroovyObject(MetaClassImpl.java:1283)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1177)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1125)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1027)
+	at groovy.lang.DelegatingMetaClass.invokeMethod(DelegatingMetaClass.java:151)
+	at org.codehaus.gant.GantMetaClass.invokeMethod(GantMetaClass.java:133)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.callCurrent(PogoMetaClassSite.java:69)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:52)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.callCurrent(PogoMetaClassSite.java:84)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:174)
+	at _GrailsCompile$_run_closure3.doCall(_GrailsCompile.groovy:57)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:93)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1218)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1125)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1027)
+	at groovy.lang.DelegatingMetaClass.invokeMethod(DelegatingMetaClass.java:151)
+	at org.codehaus.gant.GantMetaClass.invokeMethod(GantMetaClass.java:133)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.call(PogoMetaClassSite.java:42)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:48)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.call(PogoMetaClassSite.java:57)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+	at org.codehaus.gant.GantBinding$_initializeGantBinding_closure5_closure16_closure18.doCall(GantBinding.groovy:185)
+	at sun.reflect.GeneratedMethodAccessor73.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSite.invoke(PogoMetaMethodSite.java:169)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:59)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:166)
+	at org.codehaus.gant.GantBinding$_initializeGantBinding_closure5_closure16_closure18.doCall(GantBinding.groovy)
+	at sun.reflect.GeneratedMethodAccessor72.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:210)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.call(PogoMetaMethodSite.java:71)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:117)
+	at org.codehaus.gant.GantBinding.withTargetEvent(GantBinding.groovy:90)
+	at org.codehaus.gant.GantBinding.this$4$withTargetEvent(GantBinding.groovy)
+	at sun.reflect.GeneratedMethodAccessor67.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:93)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1218)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1125)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1027)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1163)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1125)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1027)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:815)
+	at groovy.lang.GroovyObjectSupport.invokeMethod(GroovyObjectSupport.java:46)
+	at groovy.lang.MetaClassImpl.invokeMethodOnGroovyObject(MetaClassImpl.java:1283)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1177)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1125)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1027)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.callCurrent(PogoMetaClassSite.java:69)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:182)
+	at org.codehaus.gant.GantBinding$_initializeGantBinding_closure5_closure16.doCall(GantBinding.groovy:185)
+	at sun.reflect.GeneratedMethodAccessor66.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSite.invoke(PogoMetaMethodSite.java:169)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:59)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:166)
+	at org.codehaus.gant.GantBinding$_initializeGantBinding_closure5_closure16.doCall(GantBinding.groovy)
+	at sun.reflect.GeneratedMethodAccessor65.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:93)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1218)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1125)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1027)
+	at groovy.lang.Closure.call(Closure.java:414)
+	at groovy.lang.Closure.call(Closure.java:408)
+	at org.codehaus.gant.GantMetaClass.processClosure(GantMetaClass.java:81)
+	at org.codehaus.gant.GantMetaClass.processArgument(GantMetaClass.java:95)
+	at org.codehaus.gant.GantMetaClass.invokeMethod(GantMetaClass.java:128)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.callCurrent(PogoMetaClassSite.java:69)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:52)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.callCurrent(PogoMetaClassSite.java:84)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:166)
+	at _GrailsCompile$_run_closure2.doCall(_GrailsCompile.groovy:44)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:93)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1218)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1125)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1027)
+	at groovy.lang.DelegatingMetaClass.invokeMethod(DelegatingMetaClass.java:151)
+	at org.codehaus.gant.GantMetaClass.invokeMethod(GantMetaClass.java:133)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.call(PogoMetaClassSite.java:42)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:48)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.call(PogoMetaClassSite.java:57)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+	at org.codehaus.gant.GantBinding$_initializeGantBinding_closure5_closure16_closure18.doCall(GantBinding.groovy:185)
+	at sun.reflect.GeneratedMethodAccessor73.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSite.invoke(PogoMetaMethodSite.java:169)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:59)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:166)
+	at org.codehaus.gant.GantBinding$_initializeGantBinding_closure5_closure16_closure18.doCall(GantBinding.groovy)
+	at sun.reflect.GeneratedMethodAccessor72.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:210)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.call(PogoMetaMethodSite.java:71)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:117)
+	at org.codehaus.gant.GantBinding.withTargetEvent(GantBinding.groovy:90)
+	at org.codehaus.gant.GantBinding.this$4$withTargetEvent(GantBinding.groovy)
+	at sun.reflect.GeneratedMethodAccessor67.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:93)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1218)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1125)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1027)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1163)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1125)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1027)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:815)
+	at groovy.lang.GroovyObjectSupport.invokeMethod(GroovyObjectSupport.java:46)
+	at groovy.lang.MetaClassImpl.invokeMethodOnGroovyObject(MetaClassImpl.java:1283)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1177)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1125)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1027)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.callCurrent(PogoMetaClassSite.java:69)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:182)
+	at org.codehaus.gant.GantBinding$_initializeGantBinding_closure5_closure16.doCall(GantBinding.groovy:185)
+	at sun.reflect.GeneratedMethodAccessor66.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSite.invoke(PogoMetaMethodSite.java:169)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:59)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:166)
+	at org.codehaus.gant.GantBinding$_initializeGantBinding_closure5_closure16.doCall(GantBinding.groovy)
+	at sun.reflect.GeneratedMethodAccessor65.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:210)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.call(PogoMetaMethodSite.java:71)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:117)
+	at gant.Gant$_dispatch_closure5.doCall(Gant.groovy:381)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:210)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.call(PogoMetaMethodSite.java:71)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+	at gant.Gant$_dispatch_closure7.doCall(Gant.groovy:415)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSite.invoke(PogoMetaMethodSite.java:169)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:59)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:166)
+	at gant.Gant$_dispatch_closure7.doCall(Gant.groovy)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:210)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.call(PogoMetaMethodSite.java:71)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:117)
+	at gant.Gant.withBuildListeners(Gant.groovy:427)
+	at gant.Gant.this$2$withBuildListeners(Gant.groovy)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:210)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:59)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:52)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:64)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:166)
+	at gant.Gant.dispatch(Gant.groovy:415)
+	at gant.Gant.this$2$dispatch(Gant.groovy)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:93)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1218)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1125)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1027)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:817)
+	at gant.Gant.invokeMethod(Gant.groovy)
+	at groovy.lang.GroovyObject$invokeMethod.callCurrent(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:52)
+	at groovy.lang.GroovyObject$invokeMethod.callCurrent(Unknown Source)
+	at gant.Gant.executeTargets(Gant.groovy:591)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSite.invoke(PogoMetaMethodSite.java:169)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:59)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:52)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:64)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:174)
+	at gant.Gant.executeTargets(Gant.groovy:590)
+	at org.codehaus.groovy.grails.cli.GrailsScriptRunner.executeWithGantInstance(GrailsScriptRunner.java:779)
+	at org.codehaus.groovy.grails.cli.GrailsScriptRunner.executeScriptFile(GrailsScriptRunner.java:571)
+	at org.codehaus.groovy.grails.cli.GrailsScriptRunner.executeScriptWithCaching(GrailsScriptRunner.java:470)
+	at org.codehaus.groovy.grails.cli.GrailsScriptRunner.executeScriptWithCaching(GrailsScriptRunner.java:421)
+	at org.grails.ide.api.impl.GrailsConnectorImpl.executeCommand(GrailsConnectorImpl.java:160)
+	at org.grails.ide.eclipse.longrunning.process.GrailsProcess.run(GrailsProcess.java:130)
+	at org.grails.ide.eclipse.longrunning.process.GrailsProcess.main(GrailsProcess.java:93)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.codehaus.groovy.grails.cli.support.GrailsStarter.rootLoader(GrailsStarter.java:236)
+	at org.codehaus.groovy.grails.cli.support.GrailsStarter.main(GrailsStarter.java:264)
+1 error
+Error |
+org.codehaus.groovy.grails.cli.ScriptExitException
+Error |
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+Error |
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+Error |
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+Error |
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+Error |
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:83)
+Error |
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:105)
+Error |
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:255)
+Error |
+	at gant.Gant$_dispatch_closure5.doCall(Gant.groovy:391)
+Error |
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+Error |
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+Error |
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+Error |
+	at java.lang.reflect.Method.invoke(Unknown Source)
+Error |
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:210)
+Error |
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.call(PogoMetaMethodSite.java:71)
+Error |
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+Error |
+	at gant.Gant$_dispatch_closure7.doCall(Gant.groovy:415)
+Error |
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+Error |
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+Error |
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+Error |
+	at java.lang.reflect.Method.invoke(Unknown Source)
+Error |
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSite.invoke(PogoMetaMethodSite.java:169)
+Error |
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:59)
+Error |
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:166)
+Error |
+	at gant.Gant$_dispatch_closure7.doCall(Gant.groovy)
+Error |
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+Error |
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+Error |
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+Error |
+	at java.lang.reflect.Method.invoke(Unknown Source)
+Error |
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:210)
+Error |
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.call(PogoMetaMethodSite.java:71)
+Error |
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:117)
+Error |
+	at gant.Gant.withBuildListeners(Gant.groovy:427)
+Error |
+	at gant.Gant.this$2$withBuildListeners(Gant.groovy)
+Error |
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+Error |
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+Error |
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+Error |
+	at java.lang.reflect.Method.invoke(Unknown Source)
+Error |
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:210)
+Error |
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:59)
+Error |
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:52)
+Error |
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:64)
+Error |
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:166)
+Error |
+	at gant.Gant.dispatch(Gant.groovy:415)
+Error |
+	at gant.Gant.this$2$dispatch(Gant.groovy)
+Error |
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+Error |
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+Error |
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+Error |
+	at java.lang.reflect.Method.invoke(Unknown Source)
+Error |
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:93)
+Error |
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)
+Error |
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1218)
+Error |
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1125)
+Error |
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1027)
+Error |
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:817)
+Error |
+	at gant.Gant.invokeMethod(Gant.groovy)
+Error |
+	at groovy.lang.GroovyObject$invokeMethod.callCurrent(Unknown Source)
+Error |
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:52)
+Error |
+	at groovy.lang.GroovyObject$invokeMethod.callCurrent(Unknown Source)
+Error |
+	at gant.Gant.executeTargets(Gant.groovy:591)
+Error |
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+Error |
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+Error |
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+Error |
+	at java.lang.reflect.Method.invoke(Unknown Source)
+Error |
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSite.invoke(PogoMetaMethodSite.java:169)
+Error |
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:59)
+Error |
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:52)
+Error |
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:64)
+Error |
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:174)
+Error |
+	at gant.Gant.executeTargets(Gant.groovy:590)
+Error |
+	at org.codehaus.groovy.grails.cli.GrailsScriptRunner.executeWithGantInstance(GrailsScriptRunner.java:779)
+Error |
+	at org.codehaus.groovy.grails.cli.GrailsScriptRunner.executeScriptFile(GrailsScriptRunner.java:571)
+Error |
+	at org.codehaus.groovy.grails.cli.GrailsScriptRunner.executeScriptWithCaching(GrailsScriptRunner.java:470)
+Error |
+	at org.codehaus.groovy.grails.cli.GrailsScriptRunner.executeScriptWithCaching(GrailsScriptRunner.java:421)
+Error |
+	at org.grails.ide.api.impl.GrailsConnectorImpl.executeCommand(GrailsConnectorImpl.java:160)
+Error |
+	at org.grails.ide.eclipse.longrunning.process.GrailsProcess.run(GrailsProcess.java:130)
+Error |
+	at org.grails.ide.eclipse.longrunning.process.GrailsProcess.main(GrailsProcess.java:93)
+Error |
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+Error |
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+Error |
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+Error |
+	at java.lang.reflect.Method.invoke(Unknown Source)
+Error |
+	at org.codehaus.groovy.grails.cli.support.GrailsStarter.rootLoader(GrailsStarter.java:236)
+Error |
+	at org.codehaus.groovy.grails.cli.support.GrailsStarter.main(GrailsStarter.java:264)
+Error |
+Caused by: org.codehaus.groovy.grails.cli.ScriptExitException
+Error |
+	at org.codehaus.groovy.grails.cli.api.BaseSettingsApi.exit(BaseSettingsApi.java:360)
+Error |
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+Error |
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+Error |
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+Error |
+	at java.lang.reflect.Method.invoke(Unknown Source)
+Error |
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:93)
+Error |
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)
+Error |
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1218)
+Error |
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1125)
+Error |
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1085)
+Error |
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1125)
+Error |
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1027)
+Error |
+	at groovy.lang.MetaClassImpl.invokePropertyOrMissing(MetaClassImpl.java:1264)
+Error |
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1220)
+Error |
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1125)
+Error |
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1027)
+Error |
+	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.callCurrent(PogoMetaClassSite.java:69)
+Error |
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:166)
+Error |
+	at _GrailsCompile.withCompilationErrorHandling(_GrailsCompile.groovy:77)
+Error |
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+Error |
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+Error |
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+Error |
+	at java.lang.reflect.Method.invoke(Unknown Source)
+Error |
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:93)
+Error |
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)
+Error |
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1218)
+Error |
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1125)
+Error |
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1027)
+Error |
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1163)
+Error |
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1125)
+Error |
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1027)
+Error |
+	at groovy.lang.DelegatingMetaClass.invokeMethod(DelegatingMetaClass.java:151)
+Error |
+	at org.codehaus.gant.GantMetaClass.invokeMethod(GantMetaClass.java:133)
+Error |
+	at org.codehaus.gant.GantMetaClass.invokeMethod(GantMetaClass.java:168)
+Error |
+	at groovy.lang.GroovyObjectSupport.invokeMethod(GroovyObjectSupport.java:46)
+Error |
+	at groovy.lang.MetaClassImpl.invokeMethodOnGroovyObject(MetaClassImpl.java:1283)
+Error |
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1177)
+Error |
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1125)
+Error |
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1027)
+Error |
+	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.callCurrent(PogoMetaClassSite.java:69)
+Error |
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:166)
+Error |
+	at _GrailsCompile$_run_closure3$_closure8.doCall(_GrailsCompile.groovy:60)
+Error |
+	at _GrailsCompile$_run_closure3$_closure8.doCall(_GrailsCompile.groovy)
+Error |
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+Error |
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+Error |
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+Error |
+	at java.lang.reflect.Method.invoke(Unknown Source)
+Error |
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:93)
+Error |
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)
+Error |
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1218)
+Error |
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1125)
+Error |
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1027)
+Error |
+	at groovy.lang.Closure.call(Closure.java:414)
+Error |
+	at groovy.lang.Closure.call(Closure.java:408)
+Error |
+	at org.codehaus.groovy.grails.cli.api.BaseSettingsApi.profile(BaseSettingsApi.java:332)
+Error |
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+Error |
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+Error |
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+Error |
+	at java.lang.reflect.Method.invoke(Unknown Source)
+Error |
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:93)
+Error |
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)
+Error |
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1218)
+Error |
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1125)
+Error |
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1085)
+Error |
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1125)
+Error |
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1027)
+Error |
+	at groovy.lang.MetaClassImpl.invokePropertyOrMissing(MetaClassImpl.java:1264)
+Error |
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1220)
+Error |
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1125)
+Error |
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1027)
+Error |
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:815)
+Error |
+	at groovy.lang.GroovyObjectSupport.invokeMethod(GroovyObjectSupport.java:46)
+Error |
+	at groovy.lang.Script.invokeMethod(Script.java:80)
+Error |
+	at groovy.lang.MetaClassImpl.invokeMethodOnGroovyObject(MetaClassImpl.java:1283)
+Error |
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1177)
+Error |
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1125)
+Error |
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1027)
+Error |
+	at groovy.lang.DelegatingMetaClass.invokeMethod(DelegatingMetaClass.java:151)
+Error |
+	at org.codehaus.gant.GantMetaClass.invokeMethod(GantMetaClass.java:133)
+Error |
+	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.callCurrent(PogoMetaClassSite.java:69)
+Error |
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:52)
+Error |
+	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.callCurrent(PogoMetaClassSite.java:84)
+Error |
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:174)
+Error |
+	at _GrailsCompile$_run_closure3.doCall(_GrailsCompile.groovy:57)
+Error |
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+Error |
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+Error |
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+Error |
+	at java.lang.reflect.Method.invoke(Unknown Source)
+Error |
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:93)
+Error |
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)
+Error |
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1218)
+Error |
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1125)
+Error |
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1027)
+Error |
+	at groovy.lang.DelegatingMetaClass.invokeMethod(DelegatingMetaClass.java:151)
+Error |
+	at org.codehaus.gant.GantMetaClass.invokeMethod(GantMetaClass.java:133)
+Error |
+	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.call(PogoMetaClassSite.java:42)
+Error |
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:48)
+Error |
+	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.call(PogoMetaClassSite.java:57)
+Error |
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+Error |
+	at org.codehaus.gant.GantBinding$_initializeGantBinding_closure5_closure16_closure18.doCall(GantBinding.groovy:185)
+Error |
+	at sun.reflect.GeneratedMethodAccessor73.invoke(Unknown Source)
+Error |
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+Error |
+	at java.lang.reflect.Method.invoke(Unknown Source)
+Error |
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSite.invoke(PogoMetaMethodSite.java:169)
+Error |
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:59)
+Error |
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:166)
+Error |
+	at org.codehaus.gant.GantBinding$_initializeGantBinding_closure5_closure16_closure18.doCall(GantBinding.groovy)
+Error |
+	at sun.reflect.GeneratedMethodAccessor72.invoke(Unknown Source)
+Error |
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+Error |
+	at java.lang.reflect.Method.invoke(Unknown Source)
+Error |
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:210)
+Error |
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.call(PogoMetaMethodSite.java:71)
+Error |
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:117)
+Error |
+	at org.codehaus.gant.GantBinding.withTargetEvent(GantBinding.groovy:90)
+Error |
+	at org.codehaus.gant.GantBinding.this$4$withTargetEvent(GantBinding.groovy)
+Error |
+	at sun.reflect.GeneratedMethodAccessor67.invoke(Unknown Source)
+Error |
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+Error |
+	at java.lang.reflect.Method.invoke(Unknown Source)
+Error |
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:93)
+Error |
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)
+Error |
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1218)
+Error |
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1125)
+Error |
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1027)
+Error |
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1163)
+Error |
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1125)
+Error |
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1027)
+Error |
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:815)
+Error |
+	at groovy.lang.GroovyObjectSupport.invokeMethod(GroovyObjectSupport.java:46)
+Error |
+	at groovy.lang.MetaClassImpl.invokeMethodOnGroovyObject(MetaClassImpl.java:1283)
+Error |
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1177)
+Error |
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1125)
+Error |
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1027)
+Error |
+	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.callCurrent(PogoMetaClassSite.java:69)
+Error |
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:182)
+Error |
+	at org.codehaus.gant.GantBinding$_initializeGantBinding_closure5_closure16.doCall(GantBinding.groovy:185)
+Error |
+	at sun.reflect.GeneratedMethodAccessor66.invoke(Unknown Source)
+Error |
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+Error |
+	at java.lang.reflect.Method.invoke(Unknown Source)
+Error |
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSite.invoke(PogoMetaMethodSite.java:169)
+Error |
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:59)
+Error |
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:166)
+Error |
+	at org.codehaus.gant.GantBinding$_initializeGantBinding_closure5_closure16.doCall(GantBinding.groovy)
+Error |
+	at sun.reflect.GeneratedMethodAccessor65.invoke(Unknown Source)
+Error |
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+Error |
+	at java.lang.reflect.Method.invoke(Unknown Source)
+Error |
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:93)
+Error |
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)
+Error |
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1218)
+Error |
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1125)
+Error |
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1027)
+Error |
+	at groovy.lang.Closure.call(Closure.java:414)
+Error |
+	at groovy.lang.Closure.call(Closure.java:408)
+Error |
+	at org.codehaus.gant.GantMetaClass.processClosure(GantMetaClass.java:81)
+Error |
+	at org.codehaus.gant.GantMetaClass.processArgument(GantMetaClass.java:95)
+Error |
+	at org.codehaus.gant.GantMetaClass.invokeMethod(GantMetaClass.java:128)
+Error |
+	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.callCurrent(PogoMetaClassSite.java:69)
+Error |
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:52)
+Error |
+	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.callCurrent(PogoMetaClassSite.java:84)
+Error |
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:166)
+Error |
+	at _GrailsCompile$_run_closure2.doCall(_GrailsCompile.groovy:44)
+Error |
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+Error |
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+Error |
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+Error |
+	at java.lang.reflect.Method.invoke(Unknown Source)
+Error |
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:93)
+Error |
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)
+Error |
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1218)
+Error |
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1125)
+Error |
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1027)
+Error |
+	at groovy.lang.DelegatingMetaClass.invokeMethod(DelegatingMetaClass.java:151)
+Error |
+	at org.codehaus.gant.GantMetaClass.invokeMethod(GantMetaClass.java:133)
+Error |
+	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.call(PogoMetaClassSite.java:42)
+Error |
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:48)
+Error |
+	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.call(PogoMetaClassSite.java:57)
+Error |
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+Error |
+	at org.codehaus.gant.GantBinding$_initializeGantBinding_closure5_closure16_closure18.doCall(GantBinding.groovy:185)
+Error |
+	at sun.reflect.GeneratedMethodAccessor73.invoke(Unknown Source)
+Error |
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+Error |
+	at java.lang.reflect.Method.invoke(Unknown Source)
+Error |
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSite.invoke(PogoMetaMethodSite.java:169)
+Error |
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:59)
+Error |
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:166)
+Error |
+	at org.codehaus.gant.GantBinding$_initializeGantBinding_closure5_closure16_closure18.doCall(GantBinding.groovy)
+Error |
+	at sun.reflect.GeneratedMethodAccessor72.invoke(Unknown Source)
+Error |
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+Error |
+	at java.lang.reflect.Method.invoke(Unknown Source)
+Error |
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:210)
+Error |
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.call(PogoMetaMethodSite.java:71)
+Error |
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:117)
+Error |
+	at org.codehaus.gant.GantBinding.withTargetEvent(GantBinding.groovy:90)
+Error |
+	at org.codehaus.gant.GantBinding.this$4$withTargetEvent(GantBinding.groovy)
+Error |
+	at sun.reflect.GeneratedMethodAccessor67.invoke(Unknown Source)
+Error |
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+Error |
+	at java.lang.reflect.Method.invoke(Unknown Source)
+Error |
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:93)
+Error |
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)
+Error |
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1218)
+Error |
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1125)
+Error |
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1027)
+Error |
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1163)
+Error |
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1125)
+Error |
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1027)
+Error |
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:815)
+Error |
+	at groovy.lang.GroovyObjectSupport.invokeMethod(GroovyObjectSupport.java:46)
+Error |
+	at groovy.lang.MetaClassImpl.invokeMethodOnGroovyObject(MetaClassImpl.java:1283)
+Error |
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1177)
+Error |
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1125)
+Error |
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1027)
+Error |
+	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.callCurrent(PogoMetaClassSite.java:69)
+Error |
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:182)
+Error |
+	at org.codehaus.gant.GantBinding$_initializeGantBinding_closure5_closure16.doCall(GantBinding.groovy:185)
+Error |
+	at sun.reflect.GeneratedMethodAccessor66.invoke(Unknown Source)
+Error |
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+Error |
+	at java.lang.reflect.Method.invoke(Unknown Source)
+Error |
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSite.invoke(PogoMetaMethodSite.java:169)
+Error |
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:59)
+Error |
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:166)
+Error |
+	at org.codehaus.gant.GantBinding$_initializeGantBinding_closure5_closure16.doCall(GantBinding.groovy)
+Error |
+	at sun.reflect.GeneratedMethodAccessor65.invoke(Unknown Source)
+Error |
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+Error |
+	at java.lang.reflect.Method.invoke(Unknown Source)
+Error |
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:210)
+Error |
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.call(PogoMetaMethodSite.java:71)
+Error |
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:117)
+Error |
+	at gant.Gant$_dispatch_closure5.doCall(Gant.groovy:381)
+Error |
+	... 74 more
+!SUBENTRY 1 org.grails.ide.eclipse.core 4 0 2019-07-31 01:28:54.920
+!MESSAGE ------System.err:-----------
+  [groovyc] org.codehaus.groovy.control.MultipleCompilationErrorsException: startup failed:
+  [groovyc] General error during semantic analysis: unable to locate the java compiler com.sun.tools.javac.Main, please change your classloader settings
+  [groovyc] 
+  [groovyc] java.lang.ClassNotFoundException: unable to locate the java compiler com.sun.tools.javac.Main, please change your classloader settings
+  [groovyc] 	at org.codehaus.groovy.tools.javac.JavacJavaCompiler.findJavac(JavacJavaCompiler.java:191)
+  [groovyc] 	at org.codehaus.groovy.tools.javac.JavacJavaCompiler.compile(JavacJavaCompiler.java:51)
+  [groovyc] 	at org.codehaus.groovy.tools.javac.JavaAwareCompilationUnit.gotoPhase(JavaAwareCompilationUnit.java:105)
+  [groovyc] 	at org.codehaus.groovy.control.CompilationUnit.compile(CompilationUnit.java:568)
+  [groovyc] 	at org.codehaus.groovy.control.CompilationUnit.compile(CompilationUnit.java:537)
+  [groovyc] 	at org.codehaus.groovy.tools.FileSystemCompiler.compile(FileSystemCompiler.java:61)
+  [groovyc] 	at org.codehaus.groovy.tools.FileSystemCompiler.doCompilation(FileSystemCompiler.java:217)
+  [groovyc] 	at org.codehaus.groovy.ant.Groovyc.runCompiler(Groovyc.java:1165)
+  [groovyc] 	at org.codehaus.groovy.ant.Groovyc.compile(Groovyc.java:1216)
+  [groovyc] 	at org.codehaus.groovy.grails.compiler.Grailsc.compile(Grailsc.java:78)
+  [groovyc] 	at org.codehaus.groovy.ant.Groovyc.execute(Groovyc.java:831)
+  [groovyc] 	at org.apache.tools.ant.UnknownElement.execute(UnknownElement.java:292)
+  [groovyc] 	at sun.reflect.GeneratedMethodAccessor46.invoke(Unknown Source)
+  [groovyc] 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+  [groovyc] 	at java.lang.reflect.Method.invoke(Unknown Source)
+  [groovyc] 	at org.apache.tools.ant.dispatch.DispatchUtils.execute(DispatchUtils.java:106)
+  [groovyc] 	at groovy.util.AntBuilder.performTask(AntBuilder.java:327)
+  [groovyc] 	at groovy.util.AntBuilder.nodeCompleted(AntBuilder.java:272)
+  [groovyc] 	at groovy.util.BuilderSupport.doInvokeMethod(BuilderSupport.java:154)
+  [groovyc] 	at groovy.util.AntBuilder.doInvokeMethod(AntBuilder.java:207)
+  [groovyc] 	at groovy.util.BuilderSupport.invokeMethod(BuilderSupport.java:67)
+  [groovyc] 	at org.codehaus.gant.GantBuilder.invokeMethod(GantBuilder.java:99)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.call(PogoMetaClassSite.java:48)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:133)
+  [groovyc] 	at org.codehaus.groovy.grails.project.compiler.GrailsProjectCompiler.compilePluginSources(GrailsProjectCompiler.groovy:380)
+  [groovyc] 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  [groovyc] 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+  [groovyc] 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+  [groovyc] 	at java.lang.reflect.Method.invoke(Unknown Source)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:210)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:59)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:174)
+  [groovyc] 	at org.codehaus.groovy.grails.project.compiler.GrailsProjectCompiler.compilePlugins(GrailsProjectCompiler.groovy:346)
+  [groovyc] 	at org.codehaus.groovy.grails.project.compiler.GrailsProjectCompiler$compilePlugins$2.callCurrent(Unknown Source)
+  [groovyc] 	at org.codehaus.groovy.grails.project.compiler.GrailsProjectCompiler.compilePlugins(GrailsProjectCompiler.groovy:314)
+  [groovyc] 	at org.codehaus.groovy.grails.project.compiler.GrailsProjectCompiler$compilePlugins$1.call(Unknown Source)
+  [groovyc] 	at _GrailsCompile$_run_closure3$_closure8$_closure9.doCall(_GrailsCompile.groovy:61)
+  [groovyc] 	at _GrailsCompile$_run_closure3$_closure8$_closure9.doCall(_GrailsCompile.groovy)
+  [groovyc] 	at _GrailsCompile$_run_closure3$_closure8$_closure9$doCall.call(Unknown Source)
+  [groovyc] 	at _GrailsCompile.withCompilationErrorHandling(_GrailsCompile.groovy:68)
+  [groovyc] 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  [groovyc] 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+  [groovyc] 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+  [groovyc] 	at java.lang.reflect.Method.invoke(Unknown Source)
+  [groovyc] 	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:93)
+  [groovyc] 	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)
+  [groovyc] 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1218)
+  [groovyc] 	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1125)
+  [groovyc] 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1027)
+  [groovyc] 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1163)
+  [groovyc] 	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1125)
+  [groovyc] 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1027)
+  [groovyc] 	at groovy.lang.DelegatingMetaClass.invokeMethod(DelegatingMetaClass.java:151)
+  [groovyc] 	at org.codehaus.gant.GantMetaClass.invokeMethod(GantMetaClass.java:133)
+  [groovyc] 	at org.codehaus.gant.GantMetaClass.invokeMethod(GantMetaClass.java:168)
+  [groovyc] 	at groovy.lang.GroovyObjectSupport.invokeMethod(GroovyObjectSupport.java:46)
+  [groovyc] 	at groovy.lang.MetaClassImpl.invokeMethodOnGroovyObject(MetaClassImpl.java:1283)
+  [groovyc] 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1177)
+  [groovyc] 	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1125)
+  [groovyc] 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1027)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.callCurrent(PogoMetaClassSite.java:69)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:166)
+  [groovyc] 	at _GrailsCompile$_run_closure3$_closure8.doCall(_GrailsCompile.groovy:60)
+  [groovyc] 	at _GrailsCompile$_run_closure3$_closure8.doCall(_GrailsCompile.groovy)
+  [groovyc] 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  [groovyc] 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+  [groovyc] 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+  [groovyc] 	at java.lang.reflect.Method.invoke(Unknown Source)
+  [groovyc] 	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:93)
+  [groovyc] 	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)
+  [groovyc] 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1218)
+  [groovyc] 	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1125)
+  [groovyc] 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1027)
+  [groovyc] 	at groovy.lang.Closure.call(Closure.java:414)
+  [groovyc] 	at groovy.lang.Closure.call(Closure.java:408)
+  [groovyc] 	at org.codehaus.groovy.grails.cli.api.BaseSettingsApi.profile(BaseSettingsApi.java:332)
+  [groovyc] 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  [groovyc] 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+  [groovyc] 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+  [groovyc] 	at java.lang.reflect.Method.invoke(Unknown Source)
+  [groovyc] 	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:93)
+  [groovyc] 	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)
+  [groovyc] 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1218)
+  [groovyc] 	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1125)
+  [groovyc] 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1085)
+  [groovyc] 	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1125)
+  [groovyc] 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1027)
+  [groovyc] 	at groovy.lang.MetaClassImpl.invokePropertyOrMissing(MetaClassImpl.java:1264)
+  [groovyc] 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1220)
+  [groovyc] 	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1125)
+  [groovyc] 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1027)
+  [groovyc] 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:815)
+  [groovyc] 	at groovy.lang.GroovyObjectSupport.invokeMethod(GroovyObjectSupport.java:46)
+  [groovyc] 	at groovy.lang.Script.invokeMethod(Script.java:80)
+  [groovyc] 	at groovy.lang.MetaClassImpl.invokeMethodOnGroovyObject(MetaClassImpl.java:1283)
+  [groovyc] 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1177)
+  [groovyc] 	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1125)
+  [groovyc] 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1027)
+  [groovyc] 	at groovy.lang.DelegatingMetaClass.invokeMethod(DelegatingMetaClass.java:151)
+  [groovyc] 	at org.codehaus.gant.GantMetaClass.invokeMethod(GantMetaClass.java:133)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.callCurrent(PogoMetaClassSite.java:69)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:52)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.callCurrent(PogoMetaClassSite.java:84)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:174)
+  [groovyc] 	at _GrailsCompile$_run_closure3.doCall(_GrailsCompile.groovy:57)
+  [groovyc] 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  [groovyc] 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+  [groovyc] 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+  [groovyc] 	at java.lang.reflect.Method.invoke(Unknown Source)
+  [groovyc] 	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:93)
+  [groovyc] 	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)
+  [groovyc] 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1218)
+  [groovyc] 	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1125)
+  [groovyc] 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1027)
+  [groovyc] 	at groovy.lang.DelegatingMetaClass.invokeMethod(DelegatingMetaClass.java:151)
+  [groovyc] 	at org.codehaus.gant.GantMetaClass.invokeMethod(GantMetaClass.java:133)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.call(PogoMetaClassSite.java:42)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:48)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.call(PogoMetaClassSite.java:57)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+  [groovyc] 	at org.codehaus.gant.GantBinding$_initializeGantBinding_closure5_closure16_closure18.doCall(GantBinding.groovy:185)
+  [groovyc] 	at sun.reflect.GeneratedMethodAccessor73.invoke(Unknown Source)
+  [groovyc] 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+  [groovyc] 	at java.lang.reflect.Method.invoke(Unknown Source)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSite.invoke(PogoMetaMethodSite.java:169)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:59)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:166)
+  [groovyc] 	at org.codehaus.gant.GantBinding$_initializeGantBinding_closure5_closure16_closure18.doCall(GantBinding.groovy)
+  [groovyc] 	at sun.reflect.GeneratedMethodAccessor72.invoke(Unknown Source)
+  [groovyc] 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+  [groovyc] 	at java.lang.reflect.Method.invoke(Unknown Source)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:210)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.call(PogoMetaMethodSite.java:71)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:117)
+  [groovyc] 	at org.codehaus.gant.GantBinding.withTargetEvent(GantBinding.groovy:90)
+  [groovyc] 	at org.codehaus.gant.GantBinding.this$4$withTargetEvent(GantBinding.groovy)
+  [groovyc] 	at sun.reflect.GeneratedMethodAccessor67.invoke(Unknown Source)
+  [groovyc] 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+  [groovyc] 	at java.lang.reflect.Method.invoke(Unknown Source)
+  [groovyc] 	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:93)
+  [groovyc] 	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)
+  [groovyc] 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1218)
+  [groovyc] 	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1125)
+  [groovyc] 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1027)
+  [groovyc] 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1163)
+  [groovyc] 	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1125)
+  [groovyc] 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1027)
+  [groovyc] 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:815)
+  [groovyc] 	at groovy.lang.GroovyObjectSupport.invokeMethod(GroovyObjectSupport.java:46)
+  [groovyc] 	at groovy.lang.MetaClassImpl.invokeMethodOnGroovyObject(MetaClassImpl.java:1283)
+  [groovyc] 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1177)
+  [groovyc] 	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1125)
+  [groovyc] 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1027)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.callCurrent(PogoMetaClassSite.java:69)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:182)
+  [groovyc] 	at org.codehaus.gant.GantBinding$_initializeGantBinding_closure5_closure16.doCall(GantBinding.groovy:185)
+  [groovyc] 	at sun.reflect.GeneratedMethodAccessor66.invoke(Unknown Source)
+  [groovyc] 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+  [groovyc] 	at java.lang.reflect.Method.invoke(Unknown Source)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSite.invoke(PogoMetaMethodSite.java:169)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:59)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:166)
+  [groovyc] 	at org.codehaus.gant.GantBinding$_initializeGantBinding_closure5_closure16.doCall(GantBinding.groovy)
+  [groovyc] 	at sun.reflect.GeneratedMethodAccessor65.invoke(Unknown Source)
+  [groovyc] 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+  [groovyc] 	at java.lang.reflect.Method.invoke(Unknown Source)
+  [groovyc] 	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:93)
+  [groovyc] 	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)
+  [groovyc] 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1218)
+  [groovyc] 	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1125)
+  [groovyc] 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1027)
+  [groovyc] 	at groovy.lang.Closure.call(Closure.java:414)
+  [groovyc] 	at groovy.lang.Closure.call(Closure.java:408)
+  [groovyc] 	at org.codehaus.gant.GantMetaClass.processClosure(GantMetaClass.java:81)
+  [groovyc] 	at org.codehaus.gant.GantMetaClass.processArgument(GantMetaClass.java:95)
+  [groovyc] 	at org.codehaus.gant.GantMetaClass.invokeMethod(GantMetaClass.java:128)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.callCurrent(PogoMetaClassSite.java:69)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:52)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.callCurrent(PogoMetaClassSite.java:84)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:166)
+  [groovyc] 	at _GrailsCompile$_run_closure2.doCall(_GrailsCompile.groovy:44)
+  [groovyc] 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  [groovyc] 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+  [groovyc] 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+  [groovyc] 	at java.lang.reflect.Method.invoke(Unknown Source)
+  [groovyc] 	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:93)
+  [groovyc] 	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)
+  [groovyc] 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1218)
+  [groovyc] 	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1125)
+  [groovyc] 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1027)
+  [groovyc] 	at groovy.lang.DelegatingMetaClass.invokeMethod(DelegatingMetaClass.java:151)
+  [groovyc] 	at org.codehaus.gant.GantMetaClass.invokeMethod(GantMetaClass.java:133)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.call(PogoMetaClassSite.java:42)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:48)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.call(PogoMetaClassSite.java:57)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+  [groovyc] 	at org.codehaus.gant.GantBinding$_initializeGantBinding_closure5_closure16_closure18.doCall(GantBinding.groovy:185)
+  [groovyc] 	at sun.reflect.GeneratedMethodAccessor73.invoke(Unknown Source)
+  [groovyc] 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+  [groovyc] 	at java.lang.reflect.Method.invoke(Unknown Source)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSite.invoke(PogoMetaMethodSite.java:169)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:59)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:166)
+  [groovyc] 	at org.codehaus.gant.GantBinding$_initializeGantBinding_closure5_closure16_closure18.doCall(GantBinding.groovy)
+  [groovyc] 	at sun.reflect.GeneratedMethodAccessor72.invoke(Unknown Source)
+  [groovyc] 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+  [groovyc] 	at java.lang.reflect.Method.invoke(Unknown Source)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:210)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.call(PogoMetaMethodSite.java:71)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:117)
+  [groovyc] 	at org.codehaus.gant.GantBinding.withTargetEvent(GantBinding.groovy:90)
+  [groovyc] 	at org.codehaus.gant.GantBinding.this$4$withTargetEvent(GantBinding.groovy)
+  [groovyc] 	at sun.reflect.GeneratedMethodAccessor67.invoke(Unknown Source)
+  [groovyc] 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+  [groovyc] 	at java.lang.reflect.Method.invoke(Unknown Source)
+  [groovyc] 	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:93)
+  [groovyc] 	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)
+  [groovyc] 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1218)
+  [groovyc] 	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1125)
+  [groovyc] 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1027)
+  [groovyc] 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1163)
+  [groovyc] 	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1125)
+  [groovyc] 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1027)
+  [groovyc] 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:815)
+  [groovyc] 	at groovy.lang.GroovyObjectSupport.invokeMethod(GroovyObjectSupport.java:46)
+  [groovyc] 	at groovy.lang.MetaClassImpl.invokeMethodOnGroovyObject(MetaClassImpl.java:1283)
+  [groovyc] 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1177)
+  [groovyc] 	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1125)
+  [groovyc] 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1027)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.callCurrent(PogoMetaClassSite.java:69)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:182)
+  [groovyc] 	at org.codehaus.gant.GantBinding$_initializeGantBinding_closure5_closure16.doCall(GantBinding.groovy:185)
+  [groovyc] 	at sun.reflect.GeneratedMethodAccessor66.invoke(Unknown Source)
+  [groovyc] 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+  [groovyc] 	at java.lang.reflect.Method.invoke(Unknown Source)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSite.invoke(PogoMetaMethodSite.java:169)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:59)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:166)
+  [groovyc] 	at org.codehaus.gant.GantBinding$_initializeGantBinding_closure5_closure16.doCall(GantBinding.groovy)
+  [groovyc] 	at sun.reflect.GeneratedMethodAccessor65.invoke(Unknown Source)
+  [groovyc] 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+  [groovyc] 	at java.lang.reflect.Method.invoke(Unknown Source)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:210)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.call(PogoMetaMethodSite.java:71)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:117)
+  [groovyc] 	at gant.Gant$_dispatch_closure5.doCall(Gant.groovy:381)
+  [groovyc] 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  [groovyc] 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+  [groovyc] 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+  [groovyc] 	at java.lang.reflect.Method.invoke(Unknown Source)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:210)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.call(PogoMetaMethodSite.java:71)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+  [groovyc] 	at gant.Gant$_dispatch_closure7.doCall(Gant.groovy:415)
+  [groovyc] 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  [groovyc] 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+  [groovyc] 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+  [groovyc] 	at java.lang.reflect.Method.invoke(Unknown Source)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSite.invoke(PogoMetaMethodSite.java:169)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:59)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:166)
+  [groovyc] 	at gant.Gant$_dispatch_closure7.doCall(Gant.groovy)
+  [groovyc] 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  [groovyc] 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+  [groovyc] 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+  [groovyc] 	at java.lang.reflect.Method.invoke(Unknown Source)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:210)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.call(PogoMetaMethodSite.java:71)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:117)
+  [groovyc] 	at gant.Gant.withBuildListeners(Gant.groovy:427)
+  [groovyc] 	at gant.Gant.this$2$withBuildListeners(Gant.groovy)
+  [groovyc] 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  [groovyc] 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+  [groovyc] 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+  [groovyc] 	at java.lang.reflect.Method.invoke(Unknown Source)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:210)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:59)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:52)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:64)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:166)
+  [groovyc] 	at gant.Gant.dispatch(Gant.groovy:415)
+  [groovyc] 	at gant.Gant.this$2$dispatch(Gant.groovy)
+  [groovyc] 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  [groovyc] 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+  [groovyc] 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+  [groovyc] 	at java.lang.reflect.Method.invoke(Unknown Source)
+  [groovyc] 	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:93)
+  [groovyc] 	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)
+  [groovyc] 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1218)
+  [groovyc] 	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1125)
+  [groovyc] 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1027)
+  [groovyc] 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:817)
+  [groovyc] 	at gant.Gant.invokeMethod(Gant.groovy)
+  [groovyc] 	at groovy.lang.GroovyObject$invokeMethod.callCurrent(Unknown Source)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:52)
+  [groovyc] 	at groovy.lang.GroovyObject$invokeMethod.callCurrent(Unknown Source)
+  [groovyc] 	at gant.Gant.executeTargets(Gant.groovy:591)
+  [groovyc] 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  [groovyc] 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+  [groovyc] 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+  [groovyc] 	at java.lang.reflect.Method.invoke(Unknown Source)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSite.invoke(PogoMetaMethodSite.java:169)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:59)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:52)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:64)
+  [groovyc] 	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:174)
+  [groovyc] 	at gant.Gant.executeTargets(Gant.groovy:590)
+  [groovyc] 	at org.codehaus.groovy.grails.cli.GrailsScriptRunner.executeWithGantInstance(GrailsScriptRunner.java:779)
+  [groovyc] 	at org.codehaus.groovy.grails.cli.GrailsScriptRunner.executeScriptFile(GrailsScriptRunner.java:571)
+  [groovyc] 	at org.codehaus.groovy.grails.cli.GrailsScriptRunner.executeScriptWithCaching(GrailsScriptRunner.java:470)
+  [groovyc] 	at org.codehaus.groovy.grails.cli.GrailsScriptRunner.executeScriptWithCaching(GrailsScriptRunner.java:421)
+  [groovyc] 	at org.grails.ide.api.impl.GrailsConnectorImpl.executeCommand(GrailsConnectorImpl.java:160)
+  [groovyc] 	at org.grails.ide.eclipse.longrunning.process.GrailsProcess.run(GrailsProcess.java:130)
+  [groovyc] 	at org.grails.ide.eclipse.longrunning.process.GrailsProcess.main(GrailsProcess.java:93)
+  [groovyc] 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  [groovyc] 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+  [groovyc] 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+  [groovyc] 	at java.lang.reflect.Method.invoke(Unknown Source)
+  [groovyc] 	at org.codehaus.groovy.grails.cli.support.GrailsStarter.rootLoader(GrailsStarter.java:236)
+  [groovyc] 	at org.codehaus.groovy.grails.cli.support.GrailsStarter.main(GrailsStarter.java:264)
+  [groovyc] 
+  [groovyc] 1 error
+
+

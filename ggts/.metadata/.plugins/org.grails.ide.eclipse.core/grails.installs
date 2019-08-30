@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<installs>
+<install is-default="false">
+<home>C:\grails\groovy-grails-tool-suite-3.6.4.RELEASE-e4.4.2-win32-x86_64\ggts-bundle\grails-2.4.4\</home>
+<name>Grails 2.4.4</name>
+</install>
+<install is-default="true">
+<home>C:\grails\grails-2.5.6\</home>
+<name>Grails 2.5.6</name>
+</install>
+</installs>
