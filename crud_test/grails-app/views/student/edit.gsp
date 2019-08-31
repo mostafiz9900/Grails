@@ -5,7 +5,9 @@
     <title>Welcome to Grails</title>
 </head>
 <body>
-   <h>I am java programmer</h>
+
+${name}
+${sub}
 
 </body>
 </html>
