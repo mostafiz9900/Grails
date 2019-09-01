@@ -9,8 +9,8 @@ class UrlMappings {
             }
         }
 
-//        "/"(view:"/index")
-        "/"(controller:"student", action:"/edti")
+        "/"(view:"/index")
+//        "/"(controller:"student", action:"/edti")
         "500"(view:'/error')
         "404"(view:'/notFound')
     }

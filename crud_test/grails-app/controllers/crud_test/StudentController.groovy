@@ -13,4 +13,8 @@ class StudentController {
         def sub="marketing"
         [name :name, sub:sub]
     }
+    def list(){
+        def  allProduct=Product.list()
+        [allProduct:allProduct]
+    }
 }
