@@ -2,9 +2,9 @@ package crud_test
 
 class StudentController {
 
-    def index() {
+   /* def index() {
         render(view: "/student/index2")
-    }
+    }*/
     def remove(){
         render("grails is best framwork in java laungruage")
     }

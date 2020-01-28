@@ -1,10 +1,10 @@
 ---
 server:
-    port: 8081
+    port: 9999
 grails:
     profile: web
     codegen:
-        defaultPackage: crud_test
+        defaultPackage: crud_02
     gorm:
         reactor:
             # Whether to translate GORM events into Reactor events
